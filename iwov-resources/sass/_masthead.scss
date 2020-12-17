@@ -1,0 +1,235 @@
+@import '_common.scss';
+
+.masthead {
+    height: 519px;
+    font-size: 18px;
+    line-height: 1.56;
+    color: $bright-blue;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    .bg-img {
+        // pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+        
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+        position: absolute;
+        width: 100%;
+
+        &-darker {
+            background-color: $white-opacity7;
+        }
+    }
+
+    .masthead-form {
+        padding: 30px 15px;
+
+        .uob-h1 {
+            margin-bottom: 20px;
+        }
+
+        .custom-select {
+            position: relative;
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            select {
+                display: none;
+            }
+
+            .select-selected {
+                opacity: 0;
+                position: relative;
+                top: -50px;
+            }
+
+            .select-selected, .select-selected-fake {
+                color: $darkest-grey;
+                border-bottom: 2px solid $bright-blue;
+                padding-bottom: 10px;
+            }
+              
+            .select-selected:after, .select-selected-fake:after {
+                position: absolute;
+                content: "";
+                top: 9px;
+                right: 3px;
+                border: solid $bright-blue;
+                border-width: 0 1px 1px 0;
+                display: inline-block;
+                padding: 6px;
+                transform: rotate(45deg);
+                transform-origin: center center;
+                transition: all 0.2s cubic-bezier(.25,1.7,.35,.8);
+            }
+            .select-selected-fake:after {
+                right: 22px;
+                top: 4px;
+            }
+            
+            .select-selected.select-arrow-active:after {
+                top: 11px;
+                transform: rotate(-135deg);
+                transform-origin: center center;
+                transition: all 0.2s cubic-bezier(.25,1.7,.35,.8);
+            }
+            
+            .select-items div,
+            .select-selected,
+            .select-selected-fake {
+                font-size: 18px;
+                line-height: 1.56;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .select-selected-fake {
+                height: 30px;
+                overflow: hidden;
+
+                li {
+                    color:$bright-blue;
+                    height: 45px;
+                    margin-bottom:45px;
+
+                    &:first-child {
+                        animation: looptexts 10s ease-in-out infinite;
+                    }
+                }
+            }
+            
+            .select-items div {
+                color: $black;
+                padding: 15px 20px;
+                transition: color 0.5s ease;
+            }
+            
+            .select-items {
+                position: relative;
+                top: -50px;
+                background-color: $white;
+                height: 232px;
+                overflow: scroll;
+                box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+                transition: all .3s ease-out;
+            }
+            
+            .select-hide {
+                height: 0;
+                opacity: 0;
+            }
+            
+            .select-items div:hover, .select-items div.same-as-selected {
+                background-color: $bright-blue;
+                color: $white;
+            }
+        }
+
+        .go-btn {
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.57;
+            color: $white;
+        }
+
+        @keyframes looptexts {
+            0% {margin-top:-270px;}
+            5% {margin-top:-180px;}
+            33% {margin-top:-180px;}
+            38% {margin-top:-90px;}
+            66% {margin-top:-90px;}
+            71% {margin-top:0px;}
+            99.99% {margin-top:0px;}
+            100% {margin-top:-270px;}
+          }
+    }
+
+
+    @include media-breakpoint-up(sm) {
+        height: 599px;
+        .masthead-form {
+            padding: 40px 30px;
+        }    
+    }
+
+    @include media-breakpoint-up(md) {
+        height: 639px;
+        // background-image: url('../assets/Images/Homepage/HomepageMasthead_Light_M_L_XL.jpg');
+        .masthead-form {
+            padding: 80px 45px;
+        }  
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: 700px;
+        .masthead-form {
+            padding: 80px 60px;
+
+            .go-btn {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+        }    
+    }
+
+    &-dark {
+        color: $white;
+        // background-image: url('../assets/Images/Homepage/HomepageMasthead_Dark_XS_S.jpg');
+
+        @include media-breakpoint-up(md) {
+            // background-image: url('../assets/Images/Homepage/HomepageMasthead_Dark_M_L_XL.jpg');
+        }
+
+        .overlay {
+           
+            background: linear-gradient(to right, rgba(33, 33, 33, 0.8) 0%, rgba(33, 33, 33, 0) 100%);
+            
+            &-darker {
+                background-color: $black-opacity7;
+            }
+
+            .uob-h1 {
+                color: $white;
+            }
+
+            .masthead-form {
+                .custom-select {
+
+                    .select-selected, .select-selected-fake {
+                        color: $white;
+                        border-bottom-color: $white;
+                    }
+
+                    .select-selected:after, .select-selected-fake:after {
+                        border-color: $white;
+                    }
+
+                    .select-selected-fake {
+                        li {
+                            color: $white;
+                        }
+                        
+                    }
+                    
+                }
+
+                .go-btn {
+                    background: $white;
+                    color: $bright-blue;
+                }
+            }
+        }
+    }   
+}

@@ -1,0 +1,87 @@
+@import 'common.scss';
+
+.card-link {
+    padding: 30px 15px 10px 15px;
+
+    .title {
+        margin-bottom: 30px;
+    }
+
+    .card-col {
+        margin-bottom: 20px;
+    }
+
+    .card {
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+        background-color: $white;
+
+        .card-body {
+            .card-text {
+                a {
+                    font-size: 16px;
+                    line-height: 1.63;
+                    font-weight: 500;
+                    color: $bright-blue;
+                }
+            }
+        }
+
+        &:hover {
+            box-shadow: none;
+            transition: all .5s ease;
+            cursor: pointer;
+            a.link-hover-effect {
+                background-size: 100% 1px;
+            }
+        }
+
+        &:focus {
+            outline: 0;
+            box-shadow: 0 0 5px 0 $focus-blue;
+            border: 3px solid  $focus-blue;
+            transition: all .3s ease;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: 30px 30px 10px 30px;      
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 40px 45px 20px 45px;
+
+        .title {
+            margin-bottom: 40px;
+        }
+
+        .card-body {
+            .card-text {
+                a {
+                    font-size: 18px;
+                    line-height: 1.56;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 50px 60px 20px 60px;
+
+        .title {
+            margin-bottom: 50px;
+        }
+
+        .card-body {
+            .card-text {
+                a {
+                    font-size: 20px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 50px 150px 20px 150px;
+    }
+}

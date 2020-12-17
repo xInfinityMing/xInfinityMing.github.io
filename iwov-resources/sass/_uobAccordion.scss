@@ -1,0 +1,124 @@
+@import 'common.scss';
+
+.uob-accordion {
+    padding: 30px 15px;
+
+    .content-title {
+        margin-bottom: 30px;
+    }
+
+    .accordion {
+        .card {
+            border: 0;
+            border-bottom: 1px solid $light-grey;
+            padding-top: 30px;
+            padding-bottom: 0;
+
+            .card-header {
+                border: none;
+                padding: 0;
+                padding-bottom: 10px;
+                background: transparent;
+                margin-bottom: 0px;
+
+                .uob-h5 {
+                    @include rbold();
+                }
+
+                .icon-toggle {
+                    width: 26px;
+                    height: 26px;
+                    margin-left: 20px;
+                    transform: rotate(0deg);
+                    transition: all .3s ease;
+                }
+            }
+
+            .collapsed {
+               
+                .uob-h5 {
+                    @include rregular();
+                }
+                 
+                .icon-toggle {
+                    margin-left: 20px;
+                    transform: rotate(180deg);
+                    transition: all .3s ease;
+                }
+            }
+
+            .card-body {
+                padding: 20px;
+                // background: $lightest-grey;
+
+                .card-body-left {
+                    img {
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: 30px;      
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 40px 45px;
+
+        .content-title {
+            margin-bottom: 40px;
+        }
+
+        .accordion {
+            .card {
+                padding-top: 40px;
+                .card-header {
+                    .icon-toggle {
+                        width: 28px;
+                        height: 28px;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 50px 60px;
+
+        .content-title {
+            margin-bottom: 50px;
+        }
+
+        .accordion {
+            .card {
+                padding-top: 50px;
+                .card-body {
+                    // padding-top: 50px;
+                    // padding-bottom: 50px;
+                    .card-body-left {
+                        img {
+                            margin-top: 30px;
+                            margin-bottom: 0px;
+                        }
+                    }
+
+                    .card-body-right {
+                        .title {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 50px 150px;
+    }
+}
+

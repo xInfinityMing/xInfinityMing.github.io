@@ -1,0 +1,138 @@
+@import 'common.scss';
+
+.tile-card-group {
+    padding: 30px 15px;
+
+    .content-title {
+        margin-bottom: 30px;
+
+        .sub-btn {
+            margin-top: 20px;
+        }
+    }
+
+    .card {
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+        .card-header {
+            border-bottom: 0;
+        }
+        .small-image {
+            width: 125px;
+            height: 125px;
+        }
+        .card-footer {
+            background-color: transparent;
+            border-top-width: 0;
+            padding-left: 20px;
+
+            .arrow-icon {
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                background: url("../assets/Icons/icons-link-blue.svg") no-repeat;
+            }
+
+            .arrow-icon:hover {
+                animation: bounce 0.6s infinite;
+            }
+            .arrow-icon:focus {
+                border-radius: 5px;
+                box-shadow: 0 0 5px 0 $focus-blue;
+                border: solid 3px $focus-blue;
+                transition: all .3s ease;
+                animation: none;
+            }
+        }
+
+        &:hover {
+            transition: all .5s ease;
+            box-shadow: none;
+            cursor: pointer;
+
+            a.link-hover-effect {
+                background-size: 100% 1px;
+            }
+
+            .arrow-icon {
+                animation: bounce 0.6s infinite;
+            }
+        }
+        
+        &:focus {
+            outline: 0;
+            box-shadow: 0 0 5px 0 $focus-blue;
+            border: 3px solid  $focus-blue;
+            transition: all .3s ease;
+        }
+    }
+
+    &--no-img {
+        .card {
+            .card-img {
+                display: none;
+            }
+        } 
+    }
+    
+    @include media-breakpoint-up(sm) {
+        padding: 30px;   
+        .card { 
+            .small-image {
+                width: 85px;
+                height: 85px;
+            }
+        }   
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 40px 45px;
+        
+        .content-title {
+            margin-bottom: 40px;
+        }
+        .card { 
+            .small-image {
+                width: 115px;
+                height: 115px;
+            }
+        } 
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 50px 60px;
+
+        .content-title {
+            margin-bottom: 50px;
+            
+            .sub-btn {
+                margin-top: 30px;
+            }
+        }
+
+        .card { 
+            .small-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 50px 150px 50px 150px;
+
+        .card { 
+            .small-image {
+                width: 190px;
+                height: 190px;
+            }
+        }
+    }
+}
+
+@keyframes bounce {
+    from { margin-left: 0; }
+    to   { 
+        margin-left: 10px;
+        background: url("../assets/Icons/icons-link-uob-blue.svg") no-repeat;
+        }
+}

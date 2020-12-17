@@ -1,0 +1,61 @@
+@import 'common.scss';
+
+.hero-image-text {
+    padding: 30px 15px 30px 15px;
+
+    img {
+        margin-bottom: 30px;
+    }
+
+    .img {
+        max-width: 190px;
+    }
+
+    .apply-btn {
+        margin-top: 20px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: 30px;  
+
+        .img {
+            max-width: 290px;
+        }    
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 40px 45px 40px 45px;
+        
+        .img {
+            max-width: 400px;
+        }
+
+        img {
+            margin-bottom: 40px;
+        }
+
+        .apply-btn {
+            margin-top: 30px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 50px 60px 50px 60px;
+
+        .img {
+            max-width: 260px;
+        }
+
+        img {
+            margin-bottom: 0px;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 50px 150px 50px 150px;
+
+        .img {
+            max-width: 305px;
+        }
+    }
+}

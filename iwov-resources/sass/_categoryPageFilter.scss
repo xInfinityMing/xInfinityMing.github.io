@@ -1,0 +1,236 @@
+@import 'common.scss';
+
+.category-page-filter {
+    padding: 30px 15px;
+
+    .title {
+        margin-bottom: 30px;
+    }
+
+    .filter-list {
+        overflow-x: scroll;
+        padding-bottom: 15px;
+        margin-bottom: 35px;
+        margin-right: -15px;
+
+        li {
+            white-space: nowrap;
+        }
+    }
+    .category-items {
+        .category-item {
+            padding-left: 0;
+            padding-right: 0;
+
+            &.hiden-filter, &.hiden-other {
+                display: none;
+            }
+        }
+    }
+
+    .card {
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+        background-color: $white;
+
+        .card-body {
+            .content-list {
+                padding-inline-start: inherit;
+            }
+
+            .card-tag {
+                position: relative;
+                bottom: 20px;
+                display: inline-block;
+                font-size: 12px;
+                line-height: 1.5;
+                letter-spacing: 0.5px;
+                font-weight: normal;
+                color: $white;
+                padding: 5px 10px;
+                background: $dark-blue;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+
+        .card-footer {
+            padding-left: 0;
+            padding-right: 0;
+            background-color: transparent;
+            border-top-width: 0;
+            padding-bottom: 20px;
+
+            .compare-btn {
+                border-top: 1px solid $light-grey;
+                padding-top: 20px;
+            }
+        }
+
+        &:hover {
+            box-shadow: none;
+            transition: all .5s ease;
+            cursor: pointer;
+            a.link-hover-effect {
+                background-size: 100% 1px;
+            }
+        }
+
+        &:focus {
+            outline: 0;
+            box-shadow: 0 0 5px 0 $focus-blue;
+            border: 3px solid  $focus-blue;
+            transition: all .3s ease;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: 30px 15px;    
+        .category-items {
+            .category-item {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }  
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 40px 30px;
+
+        .title {
+            margin-bottom: 40px;
+        }
+
+        .filter-list {
+            margin-bottom: 45px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 50px 45px 50px 45px;
+
+        .title {
+            margin-bottom: 50px;
+        }
+
+        .filter-list {
+            overflow: auto;
+            margin-bottom: 55px;
+            margin-right: 0;
+        }
+        .card {
+            .card-body {
+                .card-tag {
+                    font-size: 13px;
+                    line-height: 1.54;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 50px 135px 50px 135px;
+    }
+}
+
+.compare-overlay {
+    color: $white;
+    transition: all 1s ease-in-out;
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .title, .compare-box-btn {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .compare-box-container {
+        position: relative;
+        margin-right: 40px;
+        .inner-close-btn {
+            display: none;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            background-color: $white;
+            border-radius: 15px;
+            top: -10px;
+            right: -10px;
+            cursor: pointer;
+        }
+
+        .compare-box {
+            width: 100px;
+            height: 65px;   
+            background-color: $white-opacity2;
+            border: 1px dashed $white;
+    
+            img {
+                border-radius: 10px;
+            }
+        }
+        
+        .subtitle {
+            color:$white;
+            max-width: 100px;
+        }
+    }
+
+    .compare-box-container.fill {
+        .inner-close-btn {
+            display: block;
+        }
+        .compare-box {
+            border: 0;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        .compare-box-container {
+            .compare-box {
+                width: 140px;
+                height: 90px;   
+            }
+            .subtitle {
+                max-width: 140px;
+            }
+        }
+
+    }
+
+    @include media-breakpoint-up(md) {
+        .colse-btn {
+            top: 30px;
+            right: 30px;
+        }
+
+        .title {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .compare-box-btn {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .compare-box-container {
+            margin-right: 50px;
+        }
+        
+    }
+
+    @include media-breakpoint-up(xl) {
+    }
+}
+
+.fixed-bottom.opacity-0 {
+    z-index: -10;
+}
+.fixed-bottom.opacity-1 {
+    z-index: 1030;
+}

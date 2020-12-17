@@ -1,0 +1,99 @@
+@import 'common.scss';
+
+.financial-tips {
+    padding: 60px 15px;
+    overflow-x: scroll;
+    .financial-tips-content {   
+        white-space: nowrap;  
+        min-width: 780px;
+
+        div {
+            display: inline-block;
+            
+            img {
+                width: 225px;
+                height: auto;
+            }
+            .title, .paragraph {
+                width: 225px;
+                white-space: break-spaces;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: 60px 30px;
+
+        .financial-tips-content {
+            min-width: 1200px;
+            div {
+                img {
+                    width: 340px;
+                    height: auto;
+                }
+
+                .title, .paragraph {
+                    width: 340px;
+                    white-space: break-spaces;
+                }
+            }
+        }
+       
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 80px 45px;
+
+        .financial-tips-content {
+            min-width: auto;
+            div {
+                display: block;
+               
+                img {
+                    width: 220px;
+                    height: 220px;
+                }
+
+                .title, .paragraph {
+                    width: 220px;
+                    white-space: break-spaces;
+                }
+            }
+            div:first-child {
+                img {
+                    width: 220px;
+                    height: auto;
+                }
+            }
+        }
+        
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 100px 60px;
+
+        .financial-tips-content {
+            div {
+                img {
+                    width: 300px;
+                    height: auto;
+                }
+                .title, .paragraph {
+                    width: 300px;
+                    white-space: break-spaces;
+                }
+            }
+            div:first-child {
+                img {
+                    width: 300px;
+                    height: 400px;
+                }
+            }
+        }
+        
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 100px 150px;
+    }
+}

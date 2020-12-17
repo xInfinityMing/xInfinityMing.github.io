@@ -1,0 +1,83 @@
+  @font-face {
+    font-family: 'Roboto-Black';
+    src: url('../assets/fonts/Roboto-Black.ttf')
+  }
+
+  @font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../assets/fonts/Roboto-Bold.ttf')
+  }
+
+  @font-face {
+    font-family: 'Roboto-Light';
+    src: url('../assets/fonts/Roboto-Light.ttf')
+  }
+
+  @font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../assets/fonts/Roboto-Medium.ttf')
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf')
+  }
+
+  @font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../assets/fonts/Roboto-Regular.ttf')
+  }
+
+  @font-face {
+    font-family: 'Roboto-Thin';
+    src: url('../assets/fonts/Roboto-Thin.ttf')
+  }
+
+  @mixin rregular() {
+    font-family: 'Roboto-Regular';
+  }
+
+  @mixin rbold() {
+    font-family: 'Roboto-Bold';
+  }
+
+  @mixin rmedium() {
+    font-family: 'Roboto-Medium';
+  }
+
+  @mixin rlight() {
+    font-family: 'Roboto-Light';
+  }
+
+  @mixin rthin() {
+    font-family: 'Roboto-Thin';
+  }
+  
+  @mixin rblack() {
+    font-family: 'Roboto-Black';
+  }
+
+  .text-ff-rbold {
+    font-family: 'Roboto-Bold'!important;
+  }
+
+  .text-ff-rlight {
+    font-family: 'Roboto-Light'!important;
+  }
+
+  .text-ff-rmedium {
+    font-family: 'Roboto-Medium'!important;
+    font-weight: 500;
+  }
+
+  .text-ff-rthin {
+    font-family: 'Roboto-Thin'!important;
+  }
+
+  .text-ff-rblack {
+    font-family: 'Roboto-Black'!important;
+  }
+
+  .font-weight-500 {
+    font-weight: 500 !important;
+  }

@@ -1,0 +1,163 @@
+@import 'common.scss';
+
+.uob-scrollpy {
+    padding: 30px 15px 0px;
+    border-top: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
+
+    .content-title {
+        margin-bottom: 30px;
+    }
+
+    .nav {
+        li {
+            margin-right: 40px;
+        }
+        .nav-link {
+            font-size: 18px;
+            line-height: 1.56;
+            color: $black;
+            padding-bottom: 10px;
+
+            &.active, &.default-active {
+                background: transparent;
+                color: $bright-blue;
+                // border-bottom: 5px solid $bright-blue;
+            }
+
+            &:hover {
+                color: $bright-blue;
+                // border-bottom: 5px solid $bright-blue;
+            }
+        }
+        
+        button {
+            display: none;
+        }
+
+        hr {
+            background-color: #1F6EDA;
+            border: 0;
+            margin: 0;
+            opacity: 0;
+            height: 5px;
+            display: block;
+            position: absolute;
+            left: 20px;
+            bottom: 0;
+            transition: 0.1s ease-in-out;
+        }
+
+    }
+    // sticky nav
+    &.sticky-scrollpy-nav {
+        width: 100%;
+        position: fixed;
+        top: 67px;
+        padding-top: 15px;
+        padding-bottom: 0px;
+        background: $white;
+        z-index: 9;
+        box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.15);
+        border-bottom: 1px solid $light-grey;
+
+        &.top0 {
+            top: 0px;
+        }
+
+        .nav {
+            .nav-link {
+                padding-bottom: 20px;
+            }
+            button {
+                display: block;
+            }
+        }
+    }
+
+    .dropdown {
+        .dropdown-toggle {
+            background-color: transparent;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 5px solid $bright-blue;
+            color: $bright-blue;
+            font-size: 16px;
+            line-height: 1.63;
+
+            &:after {
+                border-color: $bright-blue;
+            }
+
+            &.show, &.active, &.focus {
+                background-color: transparent !important;
+                color: $bright-blue !important;
+                border-color: $bright-blue;
+                outline: 0 !important;
+                box-shadow: none!important;
+            }
+
+        }
+
+        .dropdown-menu {
+            border: 0;
+            
+            .dropdown-item {
+                background-color: transparent;
+                color: $black;
+                font-size: 16px;
+                line-height: 1.63;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                width: 140px;
+                &.active {
+                    border-radius: 0;
+                    border-bottom: 5px solid $bright-blue;
+                    color: $bright-blue;
+                }
+            }
+
+            &.show {
+                position: relative;
+            }
+        }
+
+        &.show {
+            .dropdown-toggle:after {
+                top: 4px;
+                position: relative;
+                transform: rotate(-135deg);
+                transition: all 0.2s ease;
+            }
+        }
+        
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: 30px 30px 0px;      
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 40px 45px 0px;
+
+        .content-title {
+            margin-bottom: 40px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 50px 60px 0px;
+
+        .content-title {
+            margin-bottom: 50px;
+        }
+
+        &.sticky-scrollpy-nav {
+            top: 70px;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 50px 150px 0px;
+    }
+}

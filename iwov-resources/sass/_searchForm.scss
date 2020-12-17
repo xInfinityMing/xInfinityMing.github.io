@@ -1,0 +1,52 @@
+@import 'common.scss';
+
+.search-form {
+    padding: 30px 15px;
+    border-top: 1px solid $light-grey;
+
+    .content-title {
+        margin-bottom: 30px;
+    }
+
+    .uob-form {
+        .icon-search {
+            position: absolute;
+            top: 3px;
+            left: 0px;
+        }
+        .icon-close {
+            right: 0px;
+            top: 7px;
+        }
+        .uob-search-box {
+            &:focus {
+                box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.15);
+                border-bottom-color: $bright-blue;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: 30px;      
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 40px 45px;
+
+        .content-title {
+            margin-bottom: 40px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 50px 60px;
+
+        .content-title {
+            margin-bottom: 50px;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 50px 150px;
+    }
+}
