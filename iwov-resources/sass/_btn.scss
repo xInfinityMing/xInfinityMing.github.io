@@ -1,7 +1,3 @@
-@import '_variable.scss';
-@import '_font.scss';
-@import '../js/plugins/bootstrap/bootstrap-4.5.0/scss/bootstrap.scss';
-
 .btn-default-primary {
     @include rmedium();
     padding: 10px 20px;
