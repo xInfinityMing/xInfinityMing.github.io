@@ -8,8 +8,8 @@
 
     .uob-calculator {
 		background-color: $dark-blue;
-		color: $white;
 		border-radius: 10px;
+		color: $white;
 
 		.nav-tabs {
 			border-bottom: 1px solid $grey-b2;
@@ -21,9 +21,22 @@
 				background-color: transparent;
 				outline: none;
 				border: 0;
-				padding: 30px 0;
+				padding-top: 30px;
+				padding-bottom: 15px;
+				padding-left: 15px;
+				padding-right: 15px;
+				height: 100%;
+				
 				&.active {
 					border-bottom: 5px solid $white;
+				}
+				&:active {
+					.uob-h5 {
+						color: $grey-b2;
+					}
+				}
+				&:focus {
+					outline: 3px solid $focus-blue;
 				}
 			}
 
@@ -34,7 +47,258 @@
 				margin: 0 195px;
 			}
 		}
-    }
+		.odom-container {
+			.odometer-wrap {
+				.odo-cur {
+					color: $black;
+					font-size: 24px;
+					line-height: 34px;
+					transform: none;
+					margin: 5px 0px 5px 5px;
+					width: 40px;
+					height: 40px;					
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.odometer-wrap-inner {
+					display: flex;
+					border: 0;
+					border-radius: 10px;
+				}
+				.odometer {
+					background: $white;
+					box-shadow: none;
+					font-size: 24px;
+					line-height: 34px;
+					padding: 5px;
+
+					.odometer-digit-spacer {
+						min-width: 30px;
+						min-height: 40px;
+						border: 0;
+						background: none;
+						box-shadow: none;
+					}
+					.odometer-value {
+						min-width: 30px;
+						min-height: 40px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+					.odometer-digit {
+						min-width: 30px;
+						min-height: 40px;
+						border: 0;
+						background: none;
+						box-shadow: none;
+						padding: 0;
+						margin-right: 10px;
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+					.odometer-formatting-mark {
+						min-width: 30px;
+						min-height: 40px;
+						border: 0;
+						box-shadow: none;
+						background: none;
+						color: $uob-blue;
+						margin-right: 10px;
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+					.odometer-value {
+						color: $uob-blue;
+					}
+				}
+
+				@include media-breakpoint-down(md) {
+					.odometer {
+						font-size: 20px;
+						line-height: 30px;
+
+						.odometer-digit-spacer,
+						.odometer-value,
+						.odometer-digit,
+						.odometer-formatting-mark {
+							min-width: 20px;
+						}
+					}
+				}
+			}
+		}
+		.boxes-form {
+			position: relative;
+			.box-item-form {
+				&:nth-child(1),
+				&:nth-child(2) {
+					&::after {
+						content: "";
+						position: absolute;
+						width: 40px;
+						height: 40px;
+						background-color: $dark-blue;
+						border-radius: 50%;
+						background-image: url(../assets/Icons/icons-plus.svg);
+						background-repeat: no-repeat;
+						background-position: center;
+						right: -35px;
+						top: calc(50% - 20px);
+						z-index: 2;
+
+						@include media-breakpoint-down(md) {
+							top: initial;
+							bottom: -35px;
+							right: 0;
+							left: calc(50% - 20px);
+						}
+					}
+				}
+				.fake-input-holder {
+					input {
+						color: $bright-blue;
+						font-size: 15px;
+					    font-family: 'Roboto-Medium';
+					}
+				}
+			}
+		}
+		.calculate-cash-rebate {
+			margin-top: 30px;
+			margin-bottom: 50px;
+
+			.cash-rebate-header {
+				font-size: 15px;
+				margin: 30px 0;
+				text-align: center;
+
+				> p {
+					margin-bottom: 10px;
+				}
+
+				@include media-breakpoint-up(xs) {
+					margin: 0 20px;
+				}
+
+				@include media-breakpoint-up(lg) {
+					margin: 0 165px;
+				}
+				@include media-breakpoint-up(xl) {
+					margin: 0 195px;
+				}
+			}
+
+			.cash-rebate-body {
+				padding: 30px;
+				color: $black;
+
+				.cash-rebate-cont {
+					background-color: $white;
+					border-radius: 10px;
+					padding: 34px 20px 20px 20px;
+					
+					figcaption {
+						@include media-breakpoint-up(xs) {
+							width: 100%;
+
+							.info {
+								position: relative;
+								top: 0;
+								margin-top: 15px;
+							}
+						}
+						@include media-breakpoint-up(md) {
+							width: 80%;
+							.info {
+								position: absolute;
+								top: calc(50% - 22px);
+								margin-top: -16px;
+							}
+						}
+						@include media-breakpoint-up(lg) {
+							width: 85%;
+						}
+					}
+				}
+				.cash-rebate-btn {
+					text-align: center;
+					margin: 50px 0 30px 0;
+				}
+				.img-wrapper {
+					display: flex;
+					flex: column;
+					align-items: center;
+					img {
+						margin-right: 10px;
+					}
+				}
+				figure {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					padding-bottom: 20px;
+					margin-bottom: 25px;
+					border-bottom: 1px solid $light-grey;
+
+					&:last-child {
+						border: 0;
+						padding-bottom: 0;
+						margin-bottom: 0;
+					}
+				}
+				.info {
+					right: 0;
+    				font-family: 'Roboto-Bold';
+				}
+				.info-rebate {
+					color: $uob-blue;
+					font-size: 20px;
+					margin-top: 15px;
+					margin-bottom: 25px;
+				}
+				input[type="number"] {
+					color: $bright-blue;
+					width: 80px;
+					margin-left: 10px;
+					padding: 10px;
+					border: 0;
+					text-align: center;
+					font-weight: bold;
+					background-color: $lightest-grey;
+				}
+				@include media-breakpoint-down(md) {
+					padding: 30px 20px;
+				}
+			}
+
+			.total {
+				display: none;
+				margin-top: 20px;
+				padding-top: 20px;
+				border-top: 1px solid #e5e5e5;
+
+				figure {
+					border: 0;
+					margin: 0;
+					padding: 0;
+					&:last-child {
+						.info-rebate {
+							margin-bottom: 0;
+							font-size: 24px;
+						}
+					}
+
+					figcaption {
+						margin-left: 42px;
+					}
+				}
+			}
+		}
+	}
 
     @include media-breakpoint-up(sm) {
         padding: 30px;
@@ -125,18 +389,21 @@
 .int-calc-holder.box-white-shadow {
 	display: block;
 	padding: 50px 30px;
+
+	@include media-breakpoint-down(md) {
+		padding: 40px 20px;
+	}
 }
 .int-calc-holder {
 	.boxes-form {
 		display: flex;
 		text-align: center;
 		.box-item-form {
-			border: 1px solid #7692bb;
-			width: 29.3%;
+			width: 33.3%;
 			display: block;
-			border-radius: 12px;
+			border-radius: 10px;
 			margin-right: 30px;
-			padding: 20px 15px;
+			padding: 20px;
 			float: left;
 			background-color: #fff;
 			position: relative;
@@ -145,18 +412,6 @@
 			}
 			&:last-child {
 				margin-right: 0px;
-				background-color: #00216f;
-				color: #fff;
-				.number-input {
-					.btn-adjust {
-						background-color: #0844ae;
-					}
-					border: 0;
-					background-color: #fff;
-				}
-				.block-label {
-					color: #fff;
-				}
 			}
 			&:first-child {
 				&:after {
@@ -179,8 +434,9 @@
 				max-width: 80px;
 			}
 			.micro-enga {
-				font-size: 12px;
-				text-align: left;
+				color: $black;
+				font-size: 13px;
+				text-align: center;
 				padding: 0 15px;
 				margin-top: 15px;
 				img {
@@ -194,10 +450,10 @@
 		display: block;
 		text-align: center;
 		display: block;
-		margin: 25px 0 15px 0;
-		font-size: 20px;
+		margin: 50px 0 20px 0;
+		font-size: 15px;
 		.value-call {
-			font-weight: 800;
+			font-weight: 700;
 		}
 	}
 }
@@ -211,10 +467,13 @@
 			color: $black;
 			margin-bottom: 20px;
 			display: block;
-			.light {
-				font-weight: 300;
-				display: block;
-				margin-top: 5px;
+
+			> div {
+				margin: 15px;
+			}
+
+			> span {
+				margin-bottom: 20px;
 			}
 		}
 	}
@@ -350,9 +609,9 @@ input[type=number] {
 		left: 0;
 		top: 0;
 		z-index: 2;
-		&:after {
-			content: '-';
-		}
+		background-image: url(../assets/Icons/icons-minus.svg);
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 	.btn-adjust.right {
 		float: right;
@@ -360,9 +619,9 @@ input[type=number] {
 		right: 0;
 		top: 0;
 		z-index: 2;
-		&:after {
-			content: '+';
-		}
+		background-image: url(../assets/Icons/icons-plus.svg);
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 	.btn-adjust.plus {
 		&:after {
@@ -493,9 +752,12 @@ p.comp-instruction {
 	}
 	.int-calc-holder {
 		.boxes-form {
+			flex-direction: column;
 			.box-item-form {
 				width: 100%;
-				margin: 22px 0;
+				margin-right: 0;
+				margin-bottom: 30px;
+				padding: 20px 15px;
 				&:first-child {
 					&:after {
 						right: initial;
@@ -508,10 +770,9 @@ p.comp-instruction {
 					}
 				}
 				&:last-child {
-					margin-top: -5px;
+					margin-bottom: 0px;
 				}
 			}
-			padding: 0 60px;
 		}
 	}
 	.fake-input-holder {
@@ -527,7 +788,8 @@ p.comp-instruction {
 			padding: 0;
 		}
 		.computation-message {
-			margin-top: 0;
+			margin-top: 30px;
+			margin-bottom: 20px;
 			font-size: 15px;
 		}
 	}

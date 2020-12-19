@@ -14171,8 +14171,8 @@ a:hover {
 }
 .uob-one-account-calculator .uob-calculator {
   background-color: #133359;
-  color: #FFFFFF;
   border-radius: 10px;
+  color: #FFFFFF;
 }
 .uob-one-account-calculator .uob-calculator .nav-tabs {
   border-bottom: 1px solid #b2b2b2;
@@ -14188,10 +14188,20 @@ a:hover {
   background-color: transparent;
   outline: none;
   border: 0;
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100%;
 }
 .uob-one-account-calculator .uob-calculator .nav-tabs .nav-link.active {
   border-bottom: 5px solid #FFFFFF;
+}
+.uob-one-account-calculator .uob-calculator .nav-tabs .nav-link:active .uob-h5 {
+  color: #b2b2b2;
+}
+.uob-one-account-calculator .uob-calculator .nav-tabs .nav-link:focus {
+  outline: 3px solid #1594B7;
 }
 @media (min-width: 992px) {
   .uob-one-account-calculator .uob-calculator .nav-tabs {
@@ -14202,6 +14212,267 @@ a:hover {
   .uob-one-account-calculator .uob-calculator .nav-tabs {
     margin: 0 195px;
   }
+}
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odo-cur {
+  color: #212121;
+  font-size: 24px;
+  line-height: 34px;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  margin: 5px 0px 5px 5px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer-wrap-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 0;
+  border-radius: 10px;
+}
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer {
+  background: #FFFFFF;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 24px;
+  line-height: 34px;
+  padding: 5px;
+}
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer .odometer-digit-spacer {
+  min-width: 30px;
+  min-height: 40px;
+  border: 0;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer .odometer-value {
+  min-width: 30px;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer .odometer-digit {
+  min-width: 30px;
+  min-height: 40px;
+  border: 0;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
+  margin-right: 10px;
+}
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer .odometer-digit:last-child {
+  margin-right: 0;
+}
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer .odometer-formatting-mark {
+  min-width: 30px;
+  min-height: 40px;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+  color: #00377B;
+  margin-right: 10px;
+}
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer .odometer-formatting-mark:last-child {
+  margin-right: 0;
+}
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer .odometer-value {
+  color: #00377B;
+}
+@media (max-width: 991.98px) {
+  .uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer .odometer-digit-spacer,
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer .odometer-value,
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer .odometer-digit,
+.uob-one-account-calculator .uob-calculator .odom-container .odometer-wrap .odometer .odometer-formatting-mark {
+    min-width: 20px;
+  }
+}
+.uob-one-account-calculator .uob-calculator .boxes-form {
+  position: relative;
+}
+.uob-one-account-calculator .uob-calculator .boxes-form .box-item-form:nth-child(1)::after, .uob-one-account-calculator .uob-calculator .boxes-form .box-item-form:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #133359;
+  border-radius: 50%;
+  background-image: url(../assets/Icons/icons-plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  right: -35px;
+  top: calc(50% - 20px);
+  z-index: 2;
+}
+@media (max-width: 991.98px) {
+  .uob-one-account-calculator .uob-calculator .boxes-form .box-item-form:nth-child(1)::after, .uob-one-account-calculator .uob-calculator .boxes-form .box-item-form:nth-child(2)::after {
+    top: initial;
+    bottom: -35px;
+    right: 0;
+    left: calc(50% - 20px);
+  }
+}
+.uob-one-account-calculator .uob-calculator .boxes-form .box-item-form .fake-input-holder input {
+  color: #1F6EDA;
+  font-size: 15px;
+  font-family: "Roboto-Medium";
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-header {
+  font-size: 15px;
+  margin: 30px 0;
+  text-align: center;
+  margin: 0 20px;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-header > p {
+  margin-bottom: 10px;
+}
+@media (min-width: 992px) {
+  .uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-header {
+    margin: 0 165px;
+  }
+}
+@media (min-width: 1200px) {
+  .uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-header {
+    margin: 0 195px;
+  }
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body {
+  padding: 30px;
+  color: #212121;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body .cash-rebate-cont {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 34px 20px 20px 20px;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body .cash-rebate-cont figcaption {
+  width: 100%;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body .cash-rebate-cont figcaption .info {
+  position: relative;
+  top: 0;
+  margin-top: 15px;
+}
+@media (min-width: 768px) {
+  .uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body .cash-rebate-cont figcaption {
+    width: 80%;
+  }
+  .uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body .cash-rebate-cont figcaption .info {
+    position: absolute;
+    top: calc(50% - 22px);
+    margin-top: -16px;
+  }
+}
+@media (min-width: 992px) {
+  .uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body .cash-rebate-cont figcaption {
+    width: 85%;
+  }
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body .cash-rebate-btn {
+  text-align: center;
+  margin: 50px 0 30px 0;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body .img-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: column;
+      -ms-flex: column;
+          flex: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body .img-wrapper img {
+  margin-right: 10px;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body figure {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #E6E6E6;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body figure:last-child {
+  border: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body .info {
+  right: 0;
+  font-family: "Roboto-Bold";
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body .info-rebate {
+  color: #00377B;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body input[type=number] {
+  color: #1F6EDA;
+  width: 80px;
+  margin-left: 10px;
+  padding: 10px;
+  border: 0;
+  text-align: center;
+  font-weight: bold;
+  background-color: #F5F5F5;
+}
+@media (max-width: 991.98px) {
+  .uob-one-account-calculator .uob-calculator .calculate-cash-rebate .cash-rebate-body {
+    padding: 30px 20px;
+  }
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .total {
+  display: none;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .total figure {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .total figure:last-child .info-rebate {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+.uob-one-account-calculator .uob-calculator .calculate-cash-rebate .total figure figcaption {
+  margin-left: 42px;
 }
 @media (min-width: 576px) {
   .uob-one-account-calculator {
@@ -14294,6 +14565,11 @@ a:hover {
   display: block;
   padding: 50px 30px;
 }
+@media (max-width: 991.98px) {
+  .int-calc-holder.box-white-shadow {
+    padding: 40px 20px;
+  }
+}
 
 .int-calc-holder .boxes-form {
   display: -webkit-box;
@@ -14302,12 +14578,11 @@ a:hover {
   text-align: center;
 }
 .int-calc-holder .boxes-form .box-item-form {
-  border: 1px solid #7692bb;
-  width: 29.3%;
+  width: 33.3%;
   display: block;
-  border-radius: 12px;
+  border-radius: 10px;
   margin-right: 30px;
-  padding: 20px 15px;
+  padding: 20px;
   float: left;
   background-color: #fff;
   position: relative;
@@ -14318,18 +14593,6 @@ a:hover {
 }
 .int-calc-holder .boxes-form .box-item-form:last-child {
   margin-right: 0px;
-  background-color: #00216f;
-  color: #fff;
-}
-.int-calc-holder .boxes-form .box-item-form:last-child .number-input {
-  border: 0;
-  background-color: #fff;
-}
-.int-calc-holder .boxes-form .box-item-form:last-child .number-input .btn-adjust {
-  background-color: #0844ae;
-}
-.int-calc-holder .boxes-form .box-item-form:last-child .block-label {
-  color: #fff;
 }
 .int-calc-holder .boxes-form .box-item-form:first-child:after {
   content: "";
@@ -14350,8 +14613,9 @@ a:hover {
   max-width: 80px;
 }
 .int-calc-holder .boxes-form .box-item-form .micro-enga {
-  font-size: 12px;
-  text-align: left;
+  color: #212121;
+  font-size: 13px;
+  text-align: center;
   padding: 0 15px;
   margin-top: 15px;
 }
@@ -14363,11 +14627,11 @@ a:hover {
   display: block;
   text-align: center;
   display: block;
-  margin: 25px 0 15px 0;
-  font-size: 20px;
+  margin: 50px 0 20px 0;
+  font-size: 15px;
 }
 .int-calc-holder .computation-message .value-call {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .boxes-form .box-item-form {
@@ -14381,10 +14645,11 @@ a:hover {
   margin-bottom: 20px;
   display: block;
 }
-.boxes-form .box-item-form .block-label .light {
-  font-weight: 300;
-  display: block;
-  margin-top: 5px;
+.boxes-form .box-item-form .block-label > div {
+  margin: 15px;
+}
+.boxes-form .box-item-form .block-label > span {
+  margin-bottom: 20px;
 }
 
 .odom-container {
@@ -14531,9 +14796,9 @@ input[type=number]::-webkit-outer-spin-button {
   left: 0;
   top: 0;
   z-index: 2;
-}
-.number-input .btn-adjust.left:after {
-  content: "-";
+  background-image: url(../assets/Icons/icons-minus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .number-input .btn-adjust.right {
   float: right;
@@ -14541,9 +14806,9 @@ input[type=number]::-webkit-outer-spin-button {
   right: 0;
   top: 0;
   z-index: 2;
-}
-.number-input .btn-adjust.right:after {
-  content: "+";
+  background-image: url(../assets/Icons/icons-plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .number-input .btn-adjust.plus:after {
   -webkit-transform: translate(-50%, -50%) rotate(90deg);
@@ -14674,11 +14939,16 @@ p.comp-instruction {
   }
 
   .int-calc-holder .boxes-form {
-    padding: 0 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .int-calc-holder .boxes-form .box-item-form {
     width: 100%;
-    margin: 22px 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding: 20px 15px;
   }
   .int-calc-holder .boxes-form .box-item-form:first-child:after {
     right: initial;
@@ -14690,7 +14960,7 @@ p.comp-instruction {
     background-size: auto 25px;
   }
   .int-calc-holder .boxes-form .box-item-form:last-child {
-    margin-top: -5px;
+    margin-bottom: 0px;
   }
 
   .fake-input-holder {
@@ -14706,7 +14976,8 @@ p.comp-instruction {
     padding: 0;
   }
   .int-calc-holder .computation-message {
-    margin-top: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
     font-size: 15px;
   }
 

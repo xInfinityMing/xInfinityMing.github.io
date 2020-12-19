@@ -1,3 +1,41 @@
+function commaSeparateNumber(val) {
+    while (/(\d+)(\d{3})/.test(val.toString())) {
+        val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+    }
+    return val;
+}
+function rebate_calc() {
+    item_p = $('#item-petrol').val();
+    item_p = parseFloat(item_p) || 0;
+    item_g = $('#item-groceries').val();
+    item_g = parseFloat(item_g) || 0;
+    item_d = $('#item-dining').val();
+    item_d = parseFloat(item_d) || 0;
+    item_r = $('#item-bill-payment').val();
+    item_r = parseFloat(item_r) || 0;
+    item_o = $('#item-other-spend').val();
+    item_o = parseFloat(item_o) || 0;
+
+    total = item_p + item_g + item_d + item_r + item_o;
+
+    if (total >= 2000) {
+        rebate = 1200;
+        interest = 'and up to 3.33% interest p.a. on savings<br class="hidden-xs" />in UOB One Account<sup>^</sup>';
+    } else if (total >= 1000) {
+        rebate = 400;
+        interest = 'and up to 3.33% interest p.a. on savings<br class="hidden-xs" />in UOB One Account<sup>^</sup>';
+    } else if (total >= 500) {
+        rebate = 200;
+        interest = 'and up to 3.33% interest p.a. on savings<br class="hidden-xs" />in UOB One Account<sup>^</sup>';
+    } else {
+        rebate = 0;
+        interest = '';
+    }
+
+    $('#total-spend').html('S$' + commaSeparateNumber(total));
+    $('#cash-rebate').html('S$' + commaSeparateNumber(rebate));
+    $('#interest').html(interest);
+}
 $(document).ready(function(){
     var underline = $("#tab-underline");
     var activePill = $("#pills-tab .default-active");
@@ -74,4 +112,26 @@ $(document).ready(function(){
             }
         });
    }
+
+   $('#calculate-btn').on('click', function (e) {
+        var el = $(this),
+            recalText = el.data('retext'),
+            curText = el.text(),
+            totalPart = $('#calculate-cash-rebate .total'),
+            display = $('#calculate-cash-rebate .total').css('display');
+
+        e.preventDefault();
+
+        if (display == 'inline-block' || display == 'block') {
+            totalPart.slideUp();
+            $(".item-input").prop('disabled', false);
+        } else {
+            totalPart.slideDown();
+            $(".item-input").prop('disabled', true);
+        }
+        el.text(recalText).attr('title', recalText);
+        el.data('retext', curText);
+
+        rebate_calc();
+    });
 })
