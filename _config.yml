@@ -1,3 +1,4 @@
 exclude:
   - "iwov-resources/js/plugins/bootstrap/bootstrap-4.5.0/site/docs/4.5/components/"
   - "iwov-resources/js/plugins/bootstrap/bootstrap-4.5.0/site/docs/4.5/getting-started/"
+  - "iwov-resources/js/plugins/bootstrap/bootstrap-4.5.0/site/docs/4.5/utilities/"
