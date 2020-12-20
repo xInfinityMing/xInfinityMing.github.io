@@ -14170,6 +14170,11 @@ a.pointer-none {
 .uob-calculator {
   padding: 30px 15px;
 }
+.uob-calculator [data-toggle=buttons] > .btn input[type=radio], .uob-calculator [data-toggle=buttons] > .btn-group > .btn input[type=radio], .uob-calculator [data-toggle=buttons] > .btn input[type=checkbox], .uob-calculator [data-toggle=buttons] > .btn-group > .btn input[type=checkbox] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
 .uob-calculator .content-title + .content-paragraph {
   margin-top: 10px;
 }

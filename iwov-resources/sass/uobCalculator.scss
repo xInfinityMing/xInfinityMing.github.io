@@ -2,6 +2,12 @@
 .uob-calculator {
     padding: 30px 15px;
 
+	[data-toggle="buttons"]>.btn input[type="radio"], [data-toggle="buttons"]>.btn-group>.btn input[type="radio"], [data-toggle="buttons"]>.btn input[type="checkbox"], [data-toggle="buttons"]>.btn-group>.btn input[type="checkbox"] {
+		position: absolute;
+		clip: rect(0, 0, 0, 0);
+		pointer-events: none;
+	}
+	
     .content-title {		
 		+ .content-paragraph {
 			margin-top: 10px;
