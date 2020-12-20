@@ -330,6 +330,7 @@
         padding: 50px 150px;
     }    
 }
+/******** Revamp Styling **********/
 
 /******** customised-2018.css from live site **********/
 /************************************/
@@ -870,6 +871,7 @@ p.comp-instruction {
 		margin-bottom: 30px !important;
 	}
 }
+/******** customised-2018.css from live site **********/
 
 /******** odometer-theme-car.css from live site **********/
 @import "//fonts.googleapis.com/css?family=Arimo";
@@ -1169,6 +1171,8 @@ p.comp-instruction {
 		transition-timing-function: linear;
 	}
 }
+/******** odometer-theme-car.css from live site **********/
+
 /******** odometer-theme-minimal.css from live site **********/
 .odometer.odometer-auto-theme {
 	display: -moz-inline-box;
@@ -1354,3 +1358,240 @@ p.comp-instruction {
 		transform: translateY(0);
 	}
 }
+/******** odometer-theme-minimal.css from live site **********/
+
+/******** customised-krisflyer-uob-account.css from live site **********/
+.grid-content {
+	.descs.no-padding {
+		padding-left: 0px;
+	}
+}
+.custom-desktop-table.bordered-darkgray {
+	td {
+		border: solid 1px #c3c3c3;
+	}
+	th {
+		border: solid 1px #c3c3c3;
+	}
+}
+.custom-desktop-table.non-stripe {
+	tr {
+		&:nth-child(even) {
+			background-color: transparent;
+		}
+	}
+}
+.custom-desktop-table.center-content {
+	td {
+		text-align: center;
+	}
+	th {
+		text-align: center;
+	}
+}
+.custom-mobile-table.bordered-darkgray {
+	td {
+		border: solid 1px #c3c3c3;
+	}
+	th {
+		border: solid 1px #c3c3c3;
+	}
+}
+.custom-mobile-table.non-stripe {
+	tr {
+		&:nth-child(even) {
+			background-color: transparent;
+		}
+	}
+}
+.custom-mobile-table.center-content {
+	td {
+		text-align: center;
+	}
+	th {
+		text-align: center;
+	}
+}
+.custom-mobile-table {
+	tbody.pl-20 {
+		padding-left: 20px;
+	}
+}
+.custom-desktop-table {
+	.td-content.td-rate.td-text-value {
+		font-size: 18px;
+	}
+}
+.td-row-header {
+	font-size: 18px;
+}
+.mt-20 {
+	margin-top: 20px;
+}
+.mt-30 {
+	margin-top: 30px;
+}
+.mt-40 {
+	margin-top: 40px;
+}
+.text-blue {
+	color: #001f67;
+}
+.credit-card.account {
+	.calculator-container {
+		.calculator-input-wrapper {
+			max-width: 600px;
+			margin: 0 auto 20px;
+			.btn-group {
+				width: 100%;
+				max-width: 202px;
+			}
+			select {
+				width: 200px;
+				font-weight: 500;
+				height: 40px;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			}
+			.select-style {
+				margin-bottom: 0;
+				position: relative;
+				&:after {
+					font-family: icomoon;
+					content: '\e92a';
+					font-size: 20px;
+					right: 10px;
+					top: 6px;
+					color: #fff;
+					position: absolute;
+				}
+			}
+			.calculator-toggle {
+				width: 200px;
+				margin-bottom: 20px;
+				.btn {
+					width: 50%;
+					text-transform: none;
+					height: 36px;
+					padding-top: 5px;
+				}
+			}
+			.form-group {
+				margin-bottom: 20px;
+			}
+		}
+		.heading-text {
+			font-weight: 700;
+		}
+		.intro {
+			font-size: 18px;
+			font-weight: 500;
+			margin-bottom: 30px;
+		}
+	}
+}
+.calculator-toggle {
+	.btn.btn-success {
+		display: inline-block;
+		margin-bottom: 0;
+		font-weight: 700;
+		text-align: center;
+		vertical-align: middle;
+		-ms-touch-action: manipulation;
+		touch-action: manipulation;
+		cursor: pointer;
+		background-image: none;
+		border: 1px solid transparent;
+		white-space: nowrap;
+		padding: 13px 34px;
+		font-size: 14px;
+		line-height: 1.42857143;
+		border-radius: 4px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		background-color: #e5e5e5;
+		color: #000;
+	}
+	.btn.btn-success.active {
+		background-color: #00216f;
+		color: #fff;
+	}
+}
+label.select-style {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 5px;
+	font-weight: bold;
+	select {
+		height: 46px;
+		padding: 6px 12px;
+		font-size: 18px;
+		color: #00216f;
+	}
+}
+.int-calc-holder {
+	.boxes-form {
+		.box-item-form {
+			&:first-child {
+				&:after {
+					background-image: none;
+				}
+			}
+			&:last-child {
+				background-color: #fff;
+				color: #00216f;
+				.block-label {
+					color: #00216f;
+					display: block;
+				}
+			}
+		}
+	}
+}
+.text-18 {
+	font-size: 18px;
+}
+.overide-for-mobile {
+	display: block !important;
+	.comparison-tbl {
+		td {
+			display: table-cell;
+		}
+	}
+}
+th {
+	display: table-cell;
+}
+@media (max-width: 767px) {
+	.credit-card.account {
+		.calculator-container {
+			.heading-text {
+				margin-bottom: 10px;
+				text-align: center;
+			}
+			.form-group {
+				text-align: center;
+			}
+			.toggle-wrapper {
+				text-align: center;
+			}
+		}
+	}
+	.infomation-tbl {
+		overflow-x: scroll;
+	}
+	.overide-for-mobile {
+		width: 750px;
+		.eq-width {
+			width: 250px;
+		}
+	}
+	.table-oveflow {
+		overflow-x: scroll;
+	}
+}
+/******** customised-krisflyer-uob-account.css from live site **********/
+

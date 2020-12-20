@@ -64,6 +64,10 @@ $(document).ready(function(){
 
     //scrollspy event 
     $(window).on('activate.bs.scrollspy', function (e, obj) {
+        var _targetText = $("." + obj.relatedTarget.slice(1)).text();
+        $("#pd-scrollpy-nav ul .nav-link").removeClass("default-active");
+        $("#pd-anchor-link .dropdown-toggle-lable").text(_targetText);
+        tabUnderLine();
         // help support detail page
         if($("hsd-page-body")) {
             var $first = $(".uob-item-scrollspy").find("#scrollspy-list").children('.list-group-item:first-child');
@@ -74,10 +78,6 @@ $(document).ready(function(){
             }
             return;
         }
-        var _targetText = $("." + obj.relatedTarget.slice(1)).text();
-        $("#pd-scrollpy-nav ul .nav-link").removeClass("default-active");
-        $("#pd-anchor-link .dropdown-toggle-lable").text(_targetText);
-        tabUnderLine();
     })
 
     function isHomePage() {
