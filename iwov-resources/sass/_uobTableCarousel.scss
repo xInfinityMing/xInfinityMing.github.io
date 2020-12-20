@@ -33,7 +33,6 @@
             transition: left .3s ease-in-out;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
             border-radius: 20px;
-            table-layout: fixed;
             
             tr {
                 // white-space: nowrap;
@@ -216,6 +215,7 @@
     }
 
     @include media-breakpoint-up(md) {
+        table-layout: fixed;
         padding: 40px 45px;
 
         .content-title {

@@ -694,6 +694,11 @@ a:hover {
     z-index: 1055;
 }
 
+a {
+    &.pointer-none {
+        pointer-events: none;
+    }
+}
 // @media (prefers-reduced-motion: reduce) {
 //     .carousel-item {
 //         transition: auto;

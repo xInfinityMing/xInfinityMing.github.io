@@ -12157,6 +12157,10 @@ a:hover {
   z-index: 1055;
 }
 
+a.pointer-none {
+  pointer-events: none;
+}
+
 .page-header .container-fluid, .page-header .container-sm, .page-header .container-md, .page-header .container-lg, .page-header .container-xl {
   padding: 0;
   margin: 0;

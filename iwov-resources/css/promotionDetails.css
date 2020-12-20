@@ -12157,6 +12157,10 @@ a:hover {
   z-index: 1055;
 }
 
+a.pointer-none {
+  pointer-events: none;
+}
+
 .page-header .container-fluid, .page-header .container-sm, .page-header .container-md, .page-header .container-lg, .page-header .container-xl {
   padding: 0;
   margin: 0;
@@ -13520,7 +13524,6 @@ a:hover {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-  table-layout: fixed;
 }
 .uob-table-carousel .table-toggle table tr {
   background: #FFFFFF;
@@ -13668,6 +13671,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .uob-table-carousel {
+    table-layout: fixed;
     padding: 40px 45px;
   }
   .uob-table-carousel .content-title {

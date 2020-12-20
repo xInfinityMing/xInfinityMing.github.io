@@ -133,6 +133,7 @@
 			
 			this.$controls.find("ul .carousel-control-prev-icon").removeClass("invisible").addClass("visible");
 			this.$controls.find("ul .carousel-control-next-icon").removeClass("invisible").addClass("visible");
+			this.$controls.find("ul .carousel-control-next-icon").parent().removeClass('pointer-none');
 			this.$controls.find(".trigger-btn").removeClass("invisible").addClass("visible");
 
 			if(first) {
@@ -140,6 +141,7 @@
 			}
 
 			if(last) {
+				this.$controls.find("ul .carousel-control-next-icon").parent().addClass('pointer-none');
 				this.$controls.find("ul .carousel-control-next-icon").removeClass("visible").addClass("invisible");
 				this.$controls.find(".trigger-btn").removeClass("visible").addClass("invisible");
 			}
