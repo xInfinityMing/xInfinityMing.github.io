@@ -1,3 +1,5 @@
 exclude:
   - "iwov-resources"
   - "pages"
+  
+theme: jekyll-theme-cayman
