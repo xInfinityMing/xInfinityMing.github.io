@@ -1,15 +1,18 @@
 /******** Revamp Styling **********/
-.uob-one-account-calculator {
+.uob-calculator {
     padding: 30px 15px;
 
-    .content-title {
-        margin-bottom: 30px;
-    }
+    .content-title {		
+		+ .content-paragraph {
+			margin-top: 10px;
+		}
+	}
 
-    .uob-calculator {
+    .uob-calculator-cont {
 		background-color: $dark-blue;
 		border-radius: 10px;
 		color: $white;
+		margin-top: 30px;
 
 		.nav-tabs {
 			border-bottom: 1px solid $grey-b2;
@@ -306,15 +309,21 @@
     @include media-breakpoint-up(md) {
         padding: 40px 45px;
 
-        .content-title {
-            margin-bottom: 40px;
+		.uob-calculator-cont {
+            margin-top: 40px;
         }
     }
     @include media-breakpoint-up(lg) {
         padding: 50px 60px;
 
-        .content-title {
-            margin-bottom: 50px;
+		.content-title {		
+			+ .content-paragraph {
+				margin-top: 20px;
+			}
+		}
+		
+		.uob-calculator-cont {
+            margin-top: 50px;
         }
     }
     @include media-breakpoint-up(xl) {
