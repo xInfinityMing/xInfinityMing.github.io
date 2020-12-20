@@ -1,2 +1,2 @@
 exclude:
-  # - "iwov-resources/js/plugins/bootstrap/"
+  - "iwov-resources/js/plugins/bootstrap/bootstrap-4.5.0/site/docs/4.5/components/"
