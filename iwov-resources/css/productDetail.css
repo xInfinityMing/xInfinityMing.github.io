@@ -14617,6 +14617,9 @@ a.pointer-none {
   background-color: #F5F5F5;
   color: #00377B;
 }
+.uob-calculator .uob-calculator-cont .uob-stash-calculator {
+  padding: 80px 30px 30px 30px;
+}
 @media (min-width: 576px) {
   .uob-calculator {
     padding: 30px;
@@ -16244,7 +16247,7 @@ th {
   background: #efefef;
 }
 
-.how-stash-works-3 .footnote {
+.uob-stash-calculator .footnote {
   font-size: 14px;
   color: #515151;
   line-height: 1.2;
@@ -16482,7 +16485,7 @@ th {
 }
 
 @media (max-width: 767px) {
-  .how-stash-works-3 .footnote {
+  .uob-stash-calculator .footnote {
     font-size: 12px;
   }
 
