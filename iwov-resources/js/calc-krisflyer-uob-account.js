@@ -112,7 +112,7 @@ var salaryIsCredited = 0;
             $container.html(result);
             if(result > 0){
                 $('.calculator-notes').show();
-                $('.calculator-notes').html('<p><img class="box-icon" src="/web-resources/personal/images/column-tiles/personal/save/chequeing/krisflyer-uob-account/icon-info.svg" style="margin-bottom: 3px;"> Your bonus KrisFlyer miles for savings is capped at ' + numberWithCommas(value) + ' miles based on 5% of MAB</p>');
+                $('.calculator-notes').html('<p>Your bonus KrisFlyer miles for savings is capped at ' + numberWithCommas(value) + ' miles based on 5% of MAB</p>');
             }
         }, 300);
 
@@ -133,37 +133,29 @@ var salaryIsCredited = 0;
 
 
 $(document).ready(function(){
-    var iconMobileWidth = $('.custom-mobile-table .table-icon').outerWidth(),
-        iconSizeAll = iconMobileWidth+40,
-        //boxFormWidth = $('.int-calc-holder .boxes-form .box-item-form').innerHeight(),
-        meterImgWidth = $('.odometer-wrap img').outerWidth();
+  var iconMobileWidth = $('.custom-mobile-table .table-icon').outerWidth(),
+      iconSizeAll = iconMobileWidth+40,
+      //boxFormWidth = $('.int-calc-holder .boxes-form .box-item-form').innerHeight(),
+      meterImgWidth = $('.odometer-wrap img').outerWidth();
 
-        $('.custom-mobile-table .align_icon').css('padding-left', iconSizeAll+'px');
+      $('.custom-mobile-table .align_icon').css('padding-left', iconSizeAll+'px');
 
-    var screen = $(window);
-    if (screen.width() > 768) {
-        $('.int-calc-holder .boxes-form .box-item-form').css('min-height','320px');
-        $('.odometer-wrap').css('margin-left','-'+meterImgWidth+'px');
-    }
+  var screen = $(window);
+  if (screen.width() > 768) {
+    $('.odometer-wrap').css('margin-left','-'+meterImgWidth+'px');
+  }
 
-    $('.btn-adjust').click(function(e){
-        e.preventDefault();
-    });
+  $('.btn-adjust').click(function(e){
+      e.preventDefault();
+  });
 
+  $('.selectpicker').selectpicker();
 
-
-
-//STYLE CALLER (REMOVE BEFORE DEPLOYMENT)
-if (jQuery(window).width() < 768) {
-     $(".desktop1").attr("href", "../../../mobile0c9a66/iwov-resources/css/mobile-style.css");
-     $(".desktop2").attr("href", "../../../mobile0c9a66/iwov-resources/css/mobile-style.css");
-     $(".desktop3").attr("href", "../../../mobile0c9a66/iwov-resources/css/product-card-detail/product-card-detail-mobile-style.css");
-     $('.breadcrumb').hide();
-}
-
-
-
-
-
-
+  //STYLE CALLER (REMOVE BEFORE DEPLOYMENT)
+  if (jQuery(window).width() < 768) {
+      $(".desktop1").attr("href", "../../../mobile0c9a66/iwov-resources/css/mobile-style.css");
+      $(".desktop2").attr("href", "../../../mobile0c9a66/iwov-resources/css/mobile-style.css");
+      $(".desktop3").attr("href", "../../../mobile0c9a66/iwov-resources/css/product-card-detail/product-card-detail-mobile-style.css");
+      $('.breadcrumb').hide();
+  }
 });

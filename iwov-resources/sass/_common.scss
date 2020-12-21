@@ -705,6 +705,61 @@ a {
 //     }
 // }
 
+// Bootstrap Select
+.bootstrap-select {
+  &.show {
+    .dropdown-toggle {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  button, .dropdown-menu {
+    font-size: 15px;
+    line-height: 24px;
+    font-family: 'Roboto-Regular'; 
+  }
+
+  .dropdown-toggle {
+    padding: 15px;
+    background-color: $lightest-grey;
+    color: $black;
+
+    &:after {
+      border: 0;
+      background: url(../assets/Icons/Chevron_Down.svg);
+      margin: 0;
+      padding: 0;
+      transform: none;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .dropdown-menu {
+    .inner {
+      &::-webkit-scrollbar {
+        width: 12px;
+      }
+      &::-webkit-scrollbar-track {
+        background: $white;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $grey-b2;
+        border-radius: 20px;
+        border: 3px solid white;
+      }
+    }
+    li {
+      a {
+        padding: 20px;
+        outline: none;
+      }
+    }
+  }
+}
 
 
 

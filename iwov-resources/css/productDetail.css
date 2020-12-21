@@ -12162,6 +12162,50 @@ a.pointer-none {
   pointer-events: none;
 }
 
+.bootstrap-select.show .dropdown-toggle:after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.bootstrap-select button, .bootstrap-select .dropdown-menu {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: "Roboto-Regular";
+}
+.bootstrap-select .dropdown-toggle {
+  padding: 15px;
+  background-color: #F5F5F5;
+  color: #212121;
+}
+.bootstrap-select .dropdown-toggle:after {
+  border: 0;
+  background: url(../assets/Icons/Chevron_Down.svg);
+  margin: 0;
+  padding: 0;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bootstrap-select .dropdown-menu .inner::-webkit-scrollbar {
+  width: 12px;
+}
+.bootstrap-select .dropdown-menu .inner::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+.bootstrap-select .dropdown-menu .inner::-webkit-scrollbar-thumb {
+  background-color: #b2b2b2;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+.bootstrap-select .dropdown-menu li a {
+  padding: 20px;
+  outline: none;
+}
+
 .page-header .container-fluid, .page-header .container-sm, .page-header .container-md, .page-header .container-lg, .page-header .container-xl {
   padding: 0;
   margin: 0;
@@ -14323,6 +14367,12 @@ a.pointer-none {
 .uob-calculator .uob-calculator-cont .boxes-form {
   position: relative;
 }
+.uob-calculator .uob-calculator-cont .boxes-form.uob-krisflyer .box-item-form::after {
+  display: none;
+}
+.uob-calculator .uob-calculator-cont .boxes-form.uob-krisflyer .box-item-form .block-label {
+  margin-bottom: 25px;
+}
 .uob-calculator .uob-calculator-cont .boxes-form .box-item-form:nth-child(1)::after, .uob-calculator .uob-calculator-cont .boxes-form .box-item-form:nth-child(2)::after {
   content: "";
   position: absolute;
@@ -14483,6 +14533,39 @@ a.pointer-none {
 }
 .uob-calculator .uob-calculator-cont .calculate-cash-rebate .total figure figcaption {
   margin-left: 42px;
+}
+.uob-calculator .uob-calculator-cont .calculator-toggle .btn.btn-success {
+  font-size: 15px;
+  font-family: "Roboto-Bold";
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+}
+.uob-calculator .uob-calculator-cont .calculator-toggle .btn.btn-success span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 25px;
+}
+.uob-calculator .uob-calculator-cont .calculator-toggle .btn.btn-success:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.uob-calculator .uob-calculator-cont .calculator-toggle .btn.btn-success:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.uob-calculator .uob-calculator-cont .int-calc-holder .computation-message.calculator-notes {
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 @media (min-width: 576px) {
   .uob-calculator {

@@ -141,7 +141,18 @@
 			}
 		}
 		.boxes-form {
-			position: relative;
+      position: relative;
+      &.uob-krisflyer {
+        .box-item-form {
+          &::after {
+            display: none;
+          }
+
+          .block-label {
+            margin-bottom: 25px;
+          }
+        }
+      }
 			.box-item-form {
 				&:nth-child(1),
 				&:nth-child(2) {
@@ -174,7 +185,7 @@
 					    font-family: 'Roboto-Medium';
 					}
 				}
-			}
+      }
 		}
 		.calculate-cash-rebate {
 			margin-top: 30px;
@@ -306,7 +317,41 @@
 					}
 				}
 			}
-		}
+    }
+    .calculator-toggle {
+      .btn.btn-success {
+        font-size: 15px;
+        font-family: 'Roboto-Bold';
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0;
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 25px;
+        }
+
+        &:first-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        &:last-child {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+    .int-calc-holder {
+      .computation-message {
+        &.calculator-notes {
+          margin-top: 20px;
+          margin-bottom: 0;
+        }
+      }
+    }
 	}
 
     @include media-breakpoint-up(sm) {
@@ -474,6 +519,7 @@
 	}
 }
 .boxes-form {
+
 	.box-item-form {
 		font-family: 'Roboto-Regular';
 		font-size: 15px;

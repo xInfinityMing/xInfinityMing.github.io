@@ -6,12 +6,14 @@
 <meta property="og:description" content="Your entertaining and descriptive copy here.">
 <!-- <og:imag></og:imag> -->
 <!-- OG data ends -->
+<link rel="stylesheet" href="../iwov-resources/css/plugins/bootstrap-select.min.css">
 <link rel="stylesheet" href="../iwov-resources/css/productDetail.css">
 <link rel="stylesheet" href="../iwov-resources/css/rate-table.css">
 <link rel="icon" type="image/x-icon" href="../iwov-resources/assets/Icons/favicon.ico?">
 <script src="../iwov-resources/js/plugins/jquery/jquery-3.5.1.min.js"></script>
 <script src="../iwov-resources/js/plugins/popper.min.js"></script>
 <script src="../iwov-resources/js/plugins/bootstrap.min.js"></script>
+<script src="../iwov-resources/js/plugins/bootstrap-select.min.js"></script>
 <script src="../iwov-resources/js/homepage.js"></script>
 <script src="../iwov-resources/js/common.js"></script>
 <script src="../iwov-resources/js/productDetail.js"></script>
@@ -1791,39 +1793,39 @@
                                 <div class="int-calc-holder box-white-shadow">
                                     <form>
                                         <!-- box-form -->
-                                        <div class="boxes-form">
+                                        <div class="boxes-form uob-krisflyer">
                                             <div class="box-item-form">
                                                 <div class="mic-copy-wrap">
-                                                    <div class="exp-item"><span class="block-label text-ff-rbold">Monthly Eligible <br
-                                                        class="hidden-xs hidden-sm" /> Card Spend</span></div>
+                                                    <div class="exp-item"><span class="block-label text-ff-rbold">Monthly Eligible Card Spend</span></div>
                                                 </div>
-                                                <label class="select-style"><select id="input-spend" class="form-control input-spend">
-                                                        <option value="0">Please select</option>
-                                                        <option value="500">500</option>
-                                                        <option value="750">750</option>
-                                                        <option value="1000">1,000</option>
-                                                        <option value="1500">1,500</option>
-                                                        <option value="2000">2,000</option>
-                                                        <option value="2500">2,500</option>
-                                                        <option value="3000">3,000</option>
-                                                        <option value="3500">3,500</option>
-                                                        <option value="4000">4,000</option>
-                                                        <option value="4500">4,500</option>
-                                                        <option value="5000">5,000</option>
-                                                        <option value="5500">5,500</option>
-                                                        <option value="6000">6,000</option>
-                                                        <option value="6500">6,500</option>
-                                                        <option value="7000">7,000</option>
-                                                        <option value="7500">7,500</option>
-                                                        <option value="8000">8,000</option>
-                                                        <option value="8500">8,500</option>
-                                                        <option value="9000">9,000</option>
-                                                        <option value="9500">9,500</option>
-                                                        <option value="10000">10,000</option>
-                                                        <option value="10500">10,500</option>
-                                                        <option value="11000">11,000</option>
-                                                    </select></label> <label class="error hidden" for="input-spend">Please select Monthly
-                                                    Deposit Balance<sup>#</sup></label>
+                                                <label class="select-style">
+                                                  <select id="input-spend" class="form-control input-spend selectpicker">
+                                                      <option value="0">Please select</option>
+                                                      <option value="500">500</option>
+                                                      <option value="750">750</option>
+                                                      <option value="1000">1,000</option>
+                                                      <option value="1500">1,500</option>
+                                                      <option value="2000">2,000</option>
+                                                      <option value="2500">2,500</option>
+                                                      <option value="3000">3,000</option>
+                                                      <option value="3500">3,500</option>
+                                                      <option value="4000">4,000</option>
+                                                      <option value="4500">4,500</option>
+                                                      <option value="5000">5,000</option>
+                                                      <option value="5500">5,500</option>
+                                                      <option value="6000">6,000</option>
+                                                      <option value="6500">6,500</option>
+                                                      <option value="7000">7,000</option>
+                                                      <option value="7500">7,500</option>
+                                                      <option value="8000">8,000</option>
+                                                      <option value="8500">8,500</option>
+                                                      <option value="9000">9,000</option>
+                                                      <option value="9500">9,500</option>
+                                                      <option value="10000">10,000</option>
+                                                      <option value="10500">10,500</option>
+                                                      <option value="11000">11,000</option>
+                                                    </select>
+                                                  </label>
                                             </div>
                                             <div class="box-item-form">
                                                 <div class="mic-copy-wrap">
@@ -1835,41 +1837,41 @@
                                                         data-toggle="buttons" data-val="0"><label
                                                             class="btn btn-success btn-toggle-salary-credit" data-val="1"> <input
                                                                 id="input-account-yes" autocomplete="off" name="krisflyerAccount"
-                                                                type="radio" value="1" /> Yes </label> <label
+                                                                type="radio" value="1" /> <span>Yes</span> </label> <label
                                                             class="btn btn-success btn-toggle-salary-credit active" data-val="0"> <input
                                                                 id="input-account-no" autocomplete="off" checked="checked"
-                                                                name="krisflyerAccount" type="radio" value="0" /> No </label></div>
+                                                                name="krisflyerAccount" type="radio" value="0" /> <span>No</span> </label></div>
                                                 </div>
                                             </div>
                                             <div class="box-item-form">
                                                 <div class="mic-copy-wrap">
-                                                    <div class="exp-item"><span class="block-label text-ff-rbold">Monthly Account <br
-                                                                class="hidden-xs hidden-sm" /> Balance</span></div>
+                                                    <div class="exp-item"><span class="block-label text-ff-rbold">Monthly Account Balance</span></div>
                                                 </div>
-                                                <label class="select-style"><select id="input-deposit" class="form-control input-deposit">
-                                                        <option value="0">Please select</option>
-                                                        <option value="1000">1,000</option>
-                                                        <option value="2000">2,000</option>
-                                                        <option value="3000">3,000</option>
-                                                        <option value="10000">10,000</option>
-                                                        <option value="20000">20,000</option>
-                                                        <option value="30000">30,000</option>
-                                                        <option value="40000">40,000</option>
-                                                        <option value="50000">50,000</option>
-                                                        <option value="60000">60,000</option>
-                                                        <option value="70000">70,000</option>
-                                                        <option value="80000">80,000</option>
-                                                        <option value="90000">90,000</option>
-                                                        <option value="100000">100,000</option>
-                                                        <option value="150000">150,000</option>
-                                                        <option value="200000">200,000</option>
-                                                        <option value="250000">250,000</option>
-                                                        <option value="300000">300,000</option>
-                                                        <option value="350000">350,000</option>
-                                                        <option value="400000">400,000</option>
+                                                <label class="select-style">
+                                                  <select id="input-deposit" class="form-control input-deposit selectpicker">
+                                                    <option value="0">Please select</option>
+                                                    <option value="1000">1,000</option>
+                                                    <option value="2000">2,000</option>
+                                                    <option value="3000">3,000</option>
+                                                    <option value="10000">10,000</option>
+                                                    <option value="20000">20,000</option>
+                                                    <option value="30000">30,000</option>
+                                                    <option value="40000">40,000</option>
+                                                    <option value="50000">50,000</option>
+                                                    <option value="60000">60,000</option>
+                                                    <option value="70000">70,000</option>
+                                                    <option value="80000">80,000</option>
+                                                    <option value="90000">90,000</option>
+                                                    <option value="100000">100,000</option>
+                                                    <option value="150000">150,000</option>
+                                                    <option value="200000">200,000</option>
+                                                    <option value="250000">250,000</option>
+                                                    <option value="300000">300,000</option>
+                                                    <option value="350000">350,000</option>
+                                                    <option value="400000">400,000</option>
                                                         <option value="450000">450,000</option>
-                                                    </select></label> <label class="error hidden" for="input-deposit">Please select Monthly
-                                                    Deposit Balance<sup>#</sup></label>
+                                                    </select>
+                                                  </label>
                                             </div>
                                         </div>
                                         <!-- end : box-form -->
