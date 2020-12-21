@@ -10,7 +10,6 @@
 		maxed: false,
 
 		_createColumn: function() {
-
 			if (this.$clone) {
 				this.$clone.remove();
 			}
@@ -78,9 +77,13 @@
 		_getIndicatorCount: function() {
 			var _rowCount = this._rowcount();
 			var indicatorNum = 0;
-			var _columnWidth = this.$table.find('thead th').width();
+      var _columnWidth = this.$table.find('thead th').width();
+      var _visibleColumn = 2;
 			if(this.$table.width() > this.$wrapper.width()) {
-				indicatorNum = _rowCount - Math.floor(this.$wrapper.width() / _columnWidth) + 2;
+        if($('.uob-krisflyer').length > 0) {
+          _visibleColumn = 4;
+        }
+        indicatorNum = _rowCount - Math.floor(this.$wrapper.width() / _columnWidth) + _visibleColumn;
 			} 
 			return indicatorNum;
 		},
@@ -216,7 +219,7 @@
 		build: function() {
 
 			this._createColumn();
-			
+      
 			if (this.$table.width() > this.$wrapper.width() && this._getIndicatorCount() > 1) {
 				this.$wrapper.addClass('overflow');
 				this.$controls.show();
@@ -280,7 +283,6 @@
   $.FED.TableToggle = TableToggle;
 
 	$.fn.tabletoggle = function() {
-
 		return this.each(function() {
 			var $el = $(this);
 
@@ -290,7 +292,9 @@
 	};
 
 	$(function() {
-		$('.table-toggle').tabletoggle();
+    if($('.table-toggle').is(":visible")) {
+      $('.table-toggle').tabletoggle();
+    }
 	});
 
 }(window.jQuery);

@@ -8,7 +8,6 @@ $(document).ready(function(){
 	
 	var screen = $(window);  
 	if (screen.width() > 768) {
-		$('.int-calc-holder .boxes-form .box-item-form').css('min-height','320px');
 		$('.odometer-wrap').css('margin-left','-'+meterImgWidth+'px');
 	}
 

@@ -18,6 +18,7 @@
 <script src="../iwov-resources/js/common.js"></script>
 <script src="../iwov-resources/js/productDetail.js"></script>
 <script src="../iwov-resources/js/table-toggle.js"></script>
+<script src="../iwov-resources/js/table-toggle.js"></script>
 <script src="../iwov-resources/js/plugins/autonumeric.js"></script>
 <script src="../iwov-resources/js/calc-krisflyer-uob-account.js"></script>
 <script src="../iwov-resources/js/plugins/kf-odometer.min.js"></script>
@@ -1891,88 +1892,117 @@
                         </div>
                         <!-- TAB PANE SECOND -->
                         <div id="show-me-what-i-can-earn" class="tab-pane">
-                            <div class="table-oveflow">
-                                <!-- DESKTOP TABLE -->
-                                <table class="custom-desktop-table overide-for-mobile">
-                                    <thead>
-                                        <tr>
-                                            <th>&nbsp;</th>
-                                            <th class="eq-width">Example 1</th>
-                                            <th class="eq-width">Example 2</th>
-                                            <th class="eq-width">Example 3</th>
-                                            <th class="eq-width">Example 4</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="td-row-header text-blue"><strong>Monthly Card Spend<sup>^</sup></strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$200</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$400</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$1,000</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$2,500</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-row-header text-blue"><strong>Monthly Average Balance<sup>^</sup></strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$15,000</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$15,000</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$100,000</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$350,000</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-row-header text-blue"><strong>5% MAB cap on Bonus KrisFlyer miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$15,000 x 5% = 750 miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$15,000 x 5% = 750 miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$100,000 x 5% = 5,000 miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$350,000 x 5% = 17,500 miles</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-row-header text-blue"><strong>Salary Credit</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>Y</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>N</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>Y</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>N</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-row-header text-blue"><strong>Base KrisFlyer miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$200 x 0.4 = 80</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$400 x 0.4 = 160</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$1,000 x 0.4 = 400</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$2,500 x 0.4 = 1,000</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-row-header text-blue"><strong>Bonus KrisFlyer miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$200 x 6 = 1,200 <br />(cap at 750
-                                                    miles)</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$400 x 5 = 2,000 <br /> (cap at 750
-                                                    miles)</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$1,000 x 6 = 6,000 <br />(cap at 5,000
-                                                    miles)</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>$2,500 x 5 = 12,500 <br /> (cap at 17,500
-                                                    miles)</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-row-header text-blue"><strong>Total KrisFlyer miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>80 + 750 = 830 miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>160 + 750 = 910 miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>400 + 5,000 = 5,400 miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>1,000 + 12,500 = 13,500 miles</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-row-header text-blue"><strong>Effective Miles earn rate</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>4.15 miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>2.28 miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>5.4 miles</strong></td>
-                                            <td class="td-content td-rate td-text-value"><strong>5.4 miles</strong></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!-- END : DESKTOP TABLE -->
+                          <div class="uob-table-carousel">
+                            <div class="col-12 pr-0 pl-0">
+                                <div class="table-toggle">
+                                    <div class="table-toggle-container">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                    <th><strong>Example 1</strong></th>
+                                                    <th><strong>Example 2</strong></th>
+                                                    <th><strong>Example 3</strong></th>
+                                                    <th><strong>Example 4</strong></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Monthly Card Spend<sup>^</sup></strong></td>
+                                                    <td>$200</td>
+                                                    <td>$400</td>
+                                                    <td>$1,000</td>
+                                                    <td>$2,500</td>
+                                                </tr>
+            
+                                                <tr>
+                                                  <td><strong>Monthly Average Balance<sup>^</sup></strong></td>
+                                                  <td>$15,000</td>
+                                                  <td>$15,000</td>
+                                                  <td>$100,000</td>
+                                                  <td>$350,000</td>
+                                                </tr>
+
+                                                <tr>
+                                                  <td><strong>5% MAB cap on Bonus KrisFlyer miles</strong></td>
+                                                  <td>$15,000 x 5% = 750 miles</td>
+                                                  <td>$15,000 x 5% = 750 miles</td>
+                                                  <td>$100,000 x 5% = 5,000 miles</td>
+                                                  <td>$350,000 x 5% = 17,500 miles</td>
+                                                </tr>
+
+                                                <tr>
+                                                  <td><strong>Salary Credit</strong></td>
+                                                  <td>Y</td>
+                                                  <td>N</td>
+                                                  <td>Y</td>
+                                                  <td>N</td>
+                                                </tr>
+
+                                                <tr>
+                                                  <td><strong>Base KrisFlyer miles</strong></td>
+                                                  <td>$200 x 0.4 = 80</td>
+                                                  <td>$400 x 0.4 = 160</td>
+                                                  <td>$1,000 x 0.4 = 400</td>
+                                                  <td>$2,500 x 0.4 = 1,000</td>
+                                                </tr>
+
+                                                <tr>
+                                                  <td><strong>Bonus KrisFlyer miles</strong></td>
+                                                  <td>$200 x 6 = 1,200 <br />(cap at 750 miles)</td>
+                                                  <td>$400 x 5 = 2,000 <br /> (cap at 750 miles)</td>
+                                                  <td>$1,000 x 6 = 6,000 <br />(cap at 5,000 miles)</td>
+                                                  <td>$2,500 x 5 = 12,500 <br /> (cap at 17,500 miles)</td>
+                                                </tr>
+
+                                                <tr>
+                                                  <td><strong>Total KrisFlyer miles</strong></td>
+                                                  <td>80 + 750 = 830 miles</td>
+                                                  <td>160 + 750 = 910 miles</td>
+                                                  <td>400 + 5,000 = 5,400 miles</td>
+                                                  <td>1,000 + 12,500 = 13,500 miles</td>
+                                                </tr>
+
+                                                <tr>
+                                                  <td><strong>Effective Miles earn rate</strong></td>
+                                                  <td>4.15 miles</td>
+                                                  <td>2.28 miles</td>
+                                                  <td>5.4 miles</td>
+                                                  <td>5.4 miles</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-toggle-controls">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#" data-moveto="-1">
+                                                    <img class="carousel-control-prev-icon"
+                                                        src="../iwov-resources/assets/Icons/icons-chevron-left.svg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-moveto="1">
+                                                    <img class="carousel-control-next-icon"
+                                                        src="../iwov-resources/assets/Icons/icons-chevron-right.svg" alt="">
+                                                </a>
+                                            </li>
+                                        </ul>
+            
+                                        <a href="#" class="position-absolute trigger-btn" data-moveto="1">
+                                            Next Column
+                                            <img src="../iwov-resources/assets/Icons/icons-chevron-right-blue.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <p><small><sup>^</sup>This calculation is for illustration purposes only. KrisFlyer miles displayed are based on
+                                  a customer&rsquo;s monthly average balance and total spend for 1 month only. Monthly average balance is
+                                  the summation of each day end balance in KrisFlyer UOB account for each month divided by the number of
+                                  calendar days for that month.</small></p>
                             </div>
+                          </div>
                             <!-- end : TAB PANE SECOND  -->
-                            <p><small><sup>^</sup>This calculation is for illustration purposes only. KrisFlyer miles displayed are based on
-                                    a customer&rsquo;s monthly average balance and total spend for 1 month only. Monthly average balance is
-                                    the summation of each day end balance in KrisFlyer UOB account for each month divided by the number of
-                                    calendar days for that month.</small></p>
                         </div>
                     </div>
                 </div>

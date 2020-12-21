@@ -158,4 +158,8 @@ $(document).ready(function(){
       $(".desktop3").attr("href", "../../../mobile0c9a66/iwov-resources/css/product-card-detail/product-card-detail-mobile-style.css");
       $('.breadcrumb').hide();
   }
+
+  $(document).on( 'shown.bs.tab', 'a[data-toggle="tab"]', function (e) {
+		$('.table-toggle').tabletoggle();
+  });
 });

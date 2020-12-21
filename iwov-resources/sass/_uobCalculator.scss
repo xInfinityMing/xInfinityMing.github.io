@@ -15,351 +15,391 @@
 	}
 
     .uob-calculator-cont {
-		background-color: $dark-blue;
-		border-radius: 10px;
-		color: $white;
-		margin-top: 30px;
+      background-color: $dark-blue;
+      border-radius: 10px;
+      color: $white;
+      margin-top: 30px;
 
-		.nav-tabs {
-			border-bottom: 1px solid $grey-b2;
-			.uob-h5 { margin-bottom: 0; color: $white; }
-			.nav-item {
-				margin: 0 15px;
-			}
-			.nav-link {
-				background-color: transparent;
-				outline: none;
-				border: 0;
-				padding-top: 30px;
-				padding-bottom: 15px;
-				padding-left: 15px;
-				padding-right: 15px;
-				height: 100%;
-				
-				&.active {
-					border-bottom: 5px solid $white;
-				}
-				&:active {
-					.uob-h5 {
-						color: $grey-b2;
-					}
-				}
-				&:focus {
-					outline: 3px solid $focus-blue;
-				}
-			}
+      .nav-tabs {
+        border-bottom: 1px solid $grey-b2;
+        .uob-h5 { margin-bottom: 0; color: $white; }
+        .nav-item {
+          margin: 0 15px;
+        }
+        .nav-link {
+          background-color: transparent;
+          outline: none;
+          border: 0;
+          padding-top: 30px;
+          padding-bottom: 15px;
+          padding-left: 15px;
+          padding-right: 15px;
+          height: 100%;
+          
+          &.active {
+            border-bottom: 5px solid $white;
+          }
+          &:active {
+            .uob-h5 {
+              color: $grey-b2;
+            }
+          }
+          &:focus {
+            outline: 3px solid $focus-blue;
+          }
+          &:hover {
+            .uob-h5 {
+              color: $grey-b2;
+            }
+          }
+          .uob-h5 {
+            transition: all .3s;
+          }
+        }
 
-			@include media-breakpoint-up(lg) {
-				margin: 0 165px;
-			}
-			@include media-breakpoint-up(xl) {
-				margin: 0 195px;
-			}
-		}
-		.odom-container {
-			.odometer-wrap {
-				.odo-cur {
-					color: $black;
-					font-size: 24px;
-					line-height: 34px;
-					transform: none;
-					margin: 5px 0px 5px 5px;
-					width: 40px;
-					height: 40px;					
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				}
-				.odometer-wrap-inner {
-					display: flex;
-					border: 0;
-					border-radius: 10px;
-				}
-				.odometer {
-					background: $white;
-					box-shadow: none;
-					font-size: 24px;
-					line-height: 34px;
-					padding: 5px;
+        @include media-breakpoint-up(lg) {
+          margin: 0 165px;
+        }
+        @include media-breakpoint-up(xl) {
+          margin: 0 195px;
+        }
+      }
+      .odom-container {
+        .odometer-wrap {
+          .odo-cur {
+            color: $black;
+            font-size: 24px;
+            line-height: 34px;
+            transform: none;
+            margin: 5px 0px 5px 5px;
+            width: 40px;
+            height: 40px;					
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .odometer-wrap-inner {
+            display: flex;
+            border: 0;
+            border-radius: 10px;
+          }
+          .odometer {
+            background: $white;
+            box-shadow: none;
+            font-size: 24px;
+            line-height: 34px;
+            padding: 5px;
 
-					.odometer-digit-spacer {
-						min-width: 30px;
-						min-height: 40px;
-						border: 0;
-						background: none;
-						box-shadow: none;
-					}
-					.odometer-value {
-						min-width: 30px;
-						min-height: 40px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-					}
-					.odometer-digit {
-						min-width: 30px;
-						min-height: 40px;
-						border: 0;
-						background: none;
-						box-shadow: none;
-						padding: 0;
-						margin-right: 10px;
-						&:last-child {
-							margin-right: 0;
-						}
-					}
-					.odometer-formatting-mark {
-						min-width: 30px;
-						min-height: 40px;
-						border: 0;
-						box-shadow: none;
-						background: none;
-						color: $uob-blue;
-						margin-right: 10px;
-						&:last-child {
-							margin-right: 0;
-						}
-					}
-					.odometer-value {
-						color: $uob-blue;
-					}
-				}
-
-				@include media-breakpoint-down(md) {
-					.odometer {
-						font-size: 20px;
-						line-height: 30px;
-
-						.odometer-digit-spacer,
-						.odometer-value,
-						.odometer-digit,
-						.odometer-formatting-mark {
-							min-width: 20px;
-						}
-					}
-				}
-			}
-		}
-		.boxes-form {
-      position: relative;
-      &.uob-krisflyer {
-        .box-item-form {
-          &::after {
-            display: none;
+            .odometer-digit-spacer {
+              min-width: 30px;
+              min-height: 40px;
+              border: 0;
+              background: none;
+              box-shadow: none;
+            }
+            .odometer-value {
+              min-width: 30px;
+              min-height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .odometer-digit {
+              min-width: 30px;
+              min-height: 40px;
+              border: 0;
+              background: none;
+              box-shadow: none;
+              padding: 0;
+              margin-right: 10px;
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+            .odometer-formatting-mark {
+              min-width: 30px;
+              min-height: 40px;
+              border: 0;
+              box-shadow: none;
+              background: none;
+              color: $uob-blue;
+              margin-right: 10px;
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+            .odometer-value {
+              color: $uob-blue;
+            }
           }
 
-          .block-label {
+          @include media-breakpoint-down(md) {
+            .odometer {
+              font-size: 20px;
+              line-height: 30px;
+
+              .odometer-digit-spacer,
+              .odometer-value,
+              .odometer-digit,
+              .odometer-formatting-mark {
+                min-width: 20px;
+              }
+            }
+          }
+        }
+      }
+      .boxes-form {
+        position: relative;
+        &.uob-krisflyer {
+          .box-item-form {
+            &::after {
+              display: none;
+            }
+
+            .block-label {
+              margin-bottom: 25px;
+            }
+          }
+        }
+        .box-item-form {
+          &:nth-child(1),
+          &:nth-child(2) {
+            &::after {
+              content: "";
+              position: absolute;
+              width: 40px;
+              height: 40px;
+              background-color: $dark-blue;
+              border-radius: 50%;
+              background-image: url(../assets/Icons/icons-plus.svg);
+              background-repeat: no-repeat;
+              background-position: center;
+              right: -35px;
+              top: calc(50% - 20px);
+              z-index: 2;
+
+              @include media-breakpoint-down(md) {
+                top: initial;
+                bottom: -35px;
+                right: 0;
+                left: calc(50% - 20px);
+              }
+            }
+          }
+          .fake-input-holder {
+            input {
+              color: $bright-blue;
+              font-size: 15px;
+                font-family: 'Roboto-Medium';
+            }
+          }
+        }
+      }
+      .calculate-cash-rebate {
+        margin-top: 30px;
+        margin-bottom: 50px;
+
+        .cash-rebate-header {
+          font-size: 15px;
+          margin: 30px 0;
+          text-align: center;
+
+          > p {
+            margin-bottom: 10px;
+          }
+
+          @include media-breakpoint-up(xs) {
+            margin: 0 20px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            margin: 0 165px;
+          }
+          @include media-breakpoint-up(xl) {
+            margin: 0 195px;
+          }
+        }
+
+        .cash-rebate-body {
+          padding: 30px;
+          color: $black;
+
+          .cash-rebate-cont {
+            background-color: $white;
+            border-radius: 10px;
+            padding: 34px 20px 20px 20px;
+            
+            figcaption {
+              @include media-breakpoint-up(xs) {
+                width: 100%;
+
+                .info {
+                  position: relative;
+                  top: 0;
+                  margin-top: 15px;
+                }
+              }
+              @include media-breakpoint-up(md) {
+                width: 80%;
+                .info {
+                  position: absolute;
+                  top: calc(50% - 22px);
+                  margin-top: -16px;
+                }
+              }
+              @include media-breakpoint-up(lg) {
+                width: 85%;
+              }
+            }
+          }
+          .cash-rebate-btn {
+            text-align: center;
+            margin: 50px 0 30px 0;
+          }
+          .img-wrapper {
+            display: flex;
+            flex: column;
+            align-items: center;
+            img {
+              margin-right: 10px;
+            }
+          }
+          figure {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid $light-grey;
+
+            &:last-child {
+              border: 0;
+              padding-bottom: 0;
+              margin-bottom: 0;
+            }
+          }
+          .info {
+            right: 0;
+              font-family: 'Roboto-Bold';
+          }
+          .info-rebate {
+            color: $uob-blue;
+            font-size: 20px;
+            margin-top: 15px;
             margin-bottom: 25px;
           }
-        }
-      }
-			.box-item-form {
-				&:nth-child(1),
-				&:nth-child(2) {
-					&::after {
-						content: "";
-						position: absolute;
-						width: 40px;
-						height: 40px;
-						background-color: $dark-blue;
-						border-radius: 50%;
-						background-image: url(../assets/Icons/icons-plus.svg);
-						background-repeat: no-repeat;
-						background-position: center;
-						right: -35px;
-						top: calc(50% - 20px);
-						z-index: 2;
-
-						@include media-breakpoint-down(md) {
-							top: initial;
-							bottom: -35px;
-							right: 0;
-							left: calc(50% - 20px);
-						}
-					}
-				}
-				.fake-input-holder {
-					input {
-						color: $bright-blue;
-						font-size: 15px;
-					    font-family: 'Roboto-Medium';
-					}
-				}
-      }
-		}
-		.calculate-cash-rebate {
-			margin-top: 30px;
-			margin-bottom: 50px;
-
-			.cash-rebate-header {
-				font-size: 15px;
-				margin: 30px 0;
-				text-align: center;
-
-				> p {
-					margin-bottom: 10px;
-				}
-
-				@include media-breakpoint-up(xs) {
-					margin: 0 20px;
-				}
-
-				@include media-breakpoint-up(lg) {
-					margin: 0 165px;
-				}
-				@include media-breakpoint-up(xl) {
-					margin: 0 195px;
-				}
-			}
-
-			.cash-rebate-body {
-				padding: 30px;
-				color: $black;
-
-				.cash-rebate-cont {
-					background-color: $white;
-					border-radius: 10px;
-					padding: 34px 20px 20px 20px;
-					
-					figcaption {
-						@include media-breakpoint-up(xs) {
-							width: 100%;
-
-							.info {
-								position: relative;
-								top: 0;
-								margin-top: 15px;
-							}
-						}
-						@include media-breakpoint-up(md) {
-							width: 80%;
-							.info {
-								position: absolute;
-								top: calc(50% - 22px);
-								margin-top: -16px;
-							}
-						}
-						@include media-breakpoint-up(lg) {
-							width: 85%;
-						}
-					}
-				}
-				.cash-rebate-btn {
-					text-align: center;
-					margin: 50px 0 30px 0;
-				}
-				.img-wrapper {
-					display: flex;
-					flex: column;
-					align-items: center;
-					img {
-						margin-right: 10px;
-					}
-				}
-				figure {
-					position: relative;
-					display: flex;
-					flex-direction: column;
-					padding-bottom: 20px;
-					margin-bottom: 25px;
-					border-bottom: 1px solid $light-grey;
-
-					&:last-child {
-						border: 0;
-						padding-bottom: 0;
-						margin-bottom: 0;
-					}
-				}
-				.info {
-					right: 0;
-    				font-family: 'Roboto-Bold';
-				}
-				.info-rebate {
-					color: $uob-blue;
-					font-size: 20px;
-					margin-top: 15px;
-					margin-bottom: 25px;
-				}
-				input[type="number"] {
-					color: $bright-blue;
-					width: 80px;
-					margin-left: 10px;
-					padding: 10px;
-					border: 0;
-					text-align: center;
-					font-weight: bold;
-					background-color: $lightest-grey;
-				}
-				@include media-breakpoint-down(md) {
-					padding: 30px 20px;
-				}
-			}
-
-			.total {
-				display: none;
-				margin-top: 20px;
-				padding-top: 20px;
-				border-top: 1px solid #e5e5e5;
-
-				figure {
-					border: 0;
-					margin: 0;
-					padding: 0;
-					&:last-child {
-						.info-rebate {
-							margin-bottom: 0;
-							font-size: 24px;
-						}
-					}
-
-					figcaption {
-						margin-left: 42px;
-					}
-				}
-			}
-    }
-    .calculator-toggle {
-      .btn.btn-success {
-        font-size: 15px;
-        font-family: 'Roboto-Bold';
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0;
-        span {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 40px;
-          height: 25px;
+          input[type="number"] {
+            color: $bright-blue;
+            width: 80px;
+            margin-left: 10px;
+            padding: 10px;
+            border: 0;
+            text-align: center;
+            font-weight: bold;
+            background-color: $lightest-grey;
+          }
+          @include media-breakpoint-down(md) {
+            padding: 30px 20px;
+          }
+          @include media-breakpoint-up(lg) {
+            padding: 30px 165px;
+          }
+          @include media-breakpoint-up(xl) {
+            padding: 30px 195px;
+          }
         }
 
-        &:first-child {
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-        }
-
-        &:last-child {
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-        }
-      }
-    }
-    .int-calc-holder {
-      .computation-message {
-        &.calculator-notes {
+        .total {
+          display: none;
           margin-top: 20px;
-          margin-bottom: 0;
+          padding-top: 20px;
+          border-top: 1px solid #e5e5e5;
+
+          figure {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            &:last-child {
+              .info-rebate {
+                margin-bottom: 0;
+                font-size: 24px;
+              }
+            }
+
+            figcaption {
+              margin-left: 42px;
+            }
+          }
         }
       }
+      .calculator-toggle {
+        .btn.btn-success {
+          font-size: 15px;
+          padding: 10px;
+          border-radius: 10px;
+          box-shadow: 0;
+          font-family: 'Roboto-Regular';
+          font-weight: normal;
+          transition: all .3s;
+          
+          &.active, &:hover {
+            font-family: 'Roboto-Bold';
+          }
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 25px;
+          }
+
+          &:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+
+          &:last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+      }
+      .int-calc-holder {
+        .computation-message {
+          &.calculator-notes {
+            margin-top: 20px;
+            margin-bottom: 0;
+          }
+        }
+      }
+      
+      .table-oveflow {
+        padding: 50px 30px;
+      }
+      .custom-desktop-table {
+        display: table !important;
+        margin: auto;
+      }
+
+      .uob-table-carousel {
+        .table-toggle + p {
+          margin-bottom: 0;
+          margin-top: 20px;
+        }
+
+        @include media-breakpoint-up(lg) {
+          padding: 50px 165px;
+        }
+
+        @include media-breakpoint-up(xl) {
+          padding: 50px 195px;
+        }
+      }
+      .uob-table-carousel .table-toggle table thead tr th {
+        background-color: $lightest-grey;
+        color: $uob-blue;
+      }
     }
-    .table-oveflow {
-      padding: 50px 30px;
-    }
-    .custom-desktop-table {
-      display: table !important;
-      margin: auto;
-    }
-	}
 
     @include media-breakpoint-up(sm) {
         padding: 30px;
@@ -460,7 +500,15 @@
 
 	@include media-breakpoint-down(md) {
 		padding: 40px 20px;
-	}
+  }
+  
+  @include media-breakpoint-up(lg) {
+    padding: 50px 165px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 50px 195px;
+  }
 }
 .int-calc-holder {
 	.boxes-form {
@@ -670,7 +718,11 @@ input[type=number] {
 		font-size: 1.6em;
 		width: 42px;
 		height: 45px;
-		line-height: 45px;
+    line-height: 45px;
+    transition: all .3s;
+    &:hover {
+  		background-color: $focus-blue;
+    }
 	}
 	.btn-adjust.left {
 		float: left;
@@ -1572,7 +1624,7 @@ p.comp-instruction {
 		-ms-user-select: none;
 		user-select: none;
 		background-color: #e5e5e5;
-		color: #000;
+    color: #000;
 	}
 	.btn.btn-success.active {
 		background-color: #00216f;
