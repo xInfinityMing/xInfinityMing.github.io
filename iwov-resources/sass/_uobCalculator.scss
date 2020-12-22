@@ -21,8 +21,13 @@
     margin-top: 30px;
 
     .nav-tabs {
+      position: relative;
       border-bottom: 1px solid $grey-b2;
-      .uob-h5 { margin-bottom: 0; color: $white; }
+      .uob-h5 { 
+        display: inline-block; 
+        margin-bottom: 0; 
+        color: $white;
+      }
       .nav-item {
         margin: 0 15px;
       }
@@ -35,10 +40,10 @@
         padding-left: 15px;
         padding-right: 15px;
         height: 100%;
-        
-        &.active {
-          border-bottom: 5px solid $white;
-        }
+        display: inline-block;
+        // &.active {
+        //   border-bottom: 5px solid $white;
+        // }
         &:active {
           .uob-h5 {
             color: $grey-b2;
@@ -47,16 +52,22 @@
         &:focus {
           outline: 3px solid $focus-blue;
         }
-        &:hover {
-          .uob-h5 {
-            color: $grey-b2;
-          }
-        }
-        .uob-h5 {
-          transition: all .3s;
-        }
       }
 
+      hr {
+        background-color: $white;
+        border: 0;
+        margin: 0;
+        opacity: 0;
+        height: 5px;
+        display: block;
+        position: absolute;
+        left: 20px;
+        bottom: 0;
+        -webkit-transition: 0.1s ease-in-out;
+        -o-transition: 0.1s ease-in-out;
+        transition: 0.1s ease-in-out;
+      }
       @include media-breakpoint-up(lg) {
         margin: 0 165px;
       }
@@ -223,6 +234,7 @@
       .cash-rebate-body {
         padding: 30px;
         color: $black;
+        margin: auto;
 
         .cash-rebate-cont {
           background-color: $white;
@@ -246,9 +258,6 @@
                 top: calc(50% - 22px);
                 margin-top: -16px;
               }
-            }
-            @include media-breakpoint-up(lg) {
-              width: 85%;
             }
           }
         }
@@ -300,12 +309,14 @@
         }
         @include media-breakpoint-down(md) {
           padding: 30px 20px;
+          width: 100%;
         }
+
         @include media-breakpoint-up(lg) {
-          padding: 30px 165px;
+          width: 90%;
         }
         @include media-breakpoint-up(xl) {
-          padding: 30px 195px;
+          width: 80%;
         }
       }
 
@@ -501,17 +512,16 @@
 .int-calc-holder.box-white-shadow {
 	display: block;
 	padding: 50px 30px;
-
+  margin: auto;
 	@include media-breakpoint-down(md) {
-		padding: 40px 20px;
+    padding: 40px 20px;
+    width: 100%;
   }
-  
-  @include media-breakpoint-up(lg) {
-    padding: 50px 165px;
+	@include media-breakpoint-up(lg) {
+    width: 90%;
   }
-
-  @include media-breakpoint-up(xl) {
-    padding: 50px 195px;
+	@include media-breakpoint-up(xl) {
+    width: 80%;
   }
 }
 .int-calc-holder {

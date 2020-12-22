@@ -53,7 +53,39 @@ $(document).ready(function(){
 			width: activeWidth,
 			opacity: 1,
 		});
-	}
+  }
+  
+  setTimeout(function() {
+    if($('#uob-calculator-tab').length > 0) {
+      var calculatorUnderline = $("#uob-calculator-tab");
+      var activeCalculator = $(".uob-calculator-cont .nav-link.active");
+      var activeCalculatorLeft = activeCalculator && activeCalculator.position() && activeCalculator.position().left + 15;
+      var activeCalculatorWidth = activeCalculator && activeCalculator.width();
+      calculatorUnderline.css({
+        left: activeCalculatorLeft,
+        width: activeCalculatorWidth,
+        opacity: 1,
+      });
+      $(".uob-calculator-cont .nav-item").hover(
+        function () {
+          calculatorUnderline.css({
+            left: $(this).find(".nav-link").position().left + 15,
+            width: $(this).find(".nav-link").width(),
+          });
+        },
+        function () {
+          var _activeCalculator = $(".uob-calculator-cont .nav-link.active");
+    
+          if (!$(this).find(".active").length) {
+            calculatorUnderline.css({
+              left: _activeCalculator && _activeCalculator.position && _activeCalculator.position().left + 15,
+              width: _activeCalculator && _activeCalculator.width(),
+            });
+          }
+        }
+      );
+    }
+  },300)
 
 	// lg screen start
 	$("#pills-tab li.nav-item").hover(

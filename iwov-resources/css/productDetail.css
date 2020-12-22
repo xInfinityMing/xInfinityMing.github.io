@@ -14229,9 +14229,11 @@ a.pointer-none {
   margin-top: 30px;
 }
 .uob-calculator .uob-calculator-cont .nav-tabs {
+  position: relative;
   border-bottom: 1px solid #b2b2b2;
 }
 .uob-calculator .uob-calculator-cont .nav-tabs .uob-h5 {
+  display: inline-block;
   margin-bottom: 0;
   color: #FFFFFF;
 }
@@ -14247,9 +14249,7 @@ a.pointer-none {
   padding-left: 15px;
   padding-right: 15px;
   height: 100%;
-}
-.uob-calculator .uob-calculator-cont .nav-tabs .nav-link.active {
-  border-bottom: 5px solid #FFFFFF;
+  display: inline-block;
 }
 .uob-calculator .uob-calculator-cont .nav-tabs .nav-link:active .uob-h5 {
   color: #b2b2b2;
@@ -14257,13 +14257,19 @@ a.pointer-none {
 .uob-calculator .uob-calculator-cont .nav-tabs .nav-link:focus {
   outline: 3px solid #1594B7;
 }
-.uob-calculator .uob-calculator-cont .nav-tabs .nav-link:hover .uob-h5 {
-  color: #b2b2b2;
-}
-.uob-calculator .uob-calculator-cont .nav-tabs .nav-link .uob-h5 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+.uob-calculator .uob-calculator-cont .nav-tabs hr {
+  background-color: #FFFFFF;
+  border: 0;
+  margin: 0;
+  opacity: 0;
+  height: 5px;
+  display: block;
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 @media (min-width: 992px) {
   .uob-calculator .uob-calculator-cont .nav-tabs {
@@ -14434,6 +14440,7 @@ a.pointer-none {
 .uob-calculator .uob-calculator-cont .calculate-cash-rebate .cash-rebate-body {
   padding: 30px;
   color: #212121;
+  margin: auto;
 }
 .uob-calculator .uob-calculator-cont .calculate-cash-rebate .cash-rebate-body .cash-rebate-cont {
   background-color: #FFFFFF;
@@ -14456,11 +14463,6 @@ a.pointer-none {
     position: absolute;
     top: calc(50% - 22px);
     margin-top: -16px;
-  }
-}
-@media (min-width: 992px) {
-  .uob-calculator .uob-calculator-cont .calculate-cash-rebate .cash-rebate-body .cash-rebate-cont figcaption {
-    width: 85%;
   }
 }
 .uob-calculator .uob-calculator-cont .calculate-cash-rebate .cash-rebate-body .cash-rebate-btn {
@@ -14522,16 +14524,17 @@ a.pointer-none {
 @media (max-width: 991.98px) {
   .uob-calculator .uob-calculator-cont .calculate-cash-rebate .cash-rebate-body {
     padding: 30px 20px;
+    width: 100%;
   }
 }
 @media (min-width: 992px) {
   .uob-calculator .uob-calculator-cont .calculate-cash-rebate .cash-rebate-body {
-    padding: 30px 165px;
+    width: 90%;
   }
 }
 @media (min-width: 1200px) {
   .uob-calculator .uob-calculator-cont .calculate-cash-rebate .cash-rebate-body {
-    padding: 30px 195px;
+    width: 80%;
   }
 }
 .uob-calculator .uob-calculator-cont .calculate-cash-rebate .total {
@@ -14714,20 +14717,22 @@ a.pointer-none {
 .int-calc-holder.box-white-shadow {
   display: block;
   padding: 50px 30px;
+  margin: auto;
 }
 @media (max-width: 991.98px) {
   .int-calc-holder.box-white-shadow {
     padding: 40px 20px;
+    width: 100%;
   }
 }
 @media (min-width: 992px) {
   .int-calc-holder.box-white-shadow {
-    padding: 50px 165px;
+    width: 90%;
   }
 }
 @media (min-width: 1200px) {
   .int-calc-holder.box-white-shadow {
-    padding: 50px 195px;
+    width: 80%;
   }
 }
 
