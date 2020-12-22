@@ -14602,18 +14602,23 @@ a.pointer-none {
   display: table !important;
   margin: auto;
 }
+.uob-calculator .uob-calculator-cont .uob-table-carousel {
+  padding: 50px 30px;
+  margin: auto;
+}
 .uob-calculator .uob-calculator-cont .uob-table-carousel .table-toggle + p {
   margin-bottom: 0;
   margin-top: 20px;
 }
-@media (min-width: 992px) {
+@media (max-width: 991.98px) {
   .uob-calculator .uob-calculator-cont .uob-table-carousel {
-    padding: 50px 165px;
+    padding: 40px 20px;
+    width: 100%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .uob-calculator .uob-calculator-cont .uob-table-carousel {
-    padding: 50px 195px;
+    width: 90%;
   }
 }
 .uob-calculator .uob-calculator-cont .uob-table-carousel .table-toggle table thead tr th {
