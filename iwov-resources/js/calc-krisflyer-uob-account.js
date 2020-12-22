@@ -8,7 +8,6 @@ var salaryIsCredited = 0;
 (function() {
 
     $(function(e) {
-        console.log('doc.ready');
         initSelect();
     });
 

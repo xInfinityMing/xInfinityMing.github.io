@@ -215,7 +215,7 @@
   }
 
   function calculateMAB(currentMonthBalance, previousMonthBalance, month, year) {
-    console.log("calculateMAB", currentMonthBalance, previousMonthBalance, month, year);
+    // console.log("calculateMAB", currentMonthBalance, previousMonthBalance, month, year);
     var result = {
       total: 0,
       maxRate: 0
@@ -227,7 +227,7 @@
     } else {
       for (var i = 0; i < calculatorData.tier.length; i++) {
         tempAmount = (currentMonthBalance > calculatorData.tier[i].max) ? calculatorData.tier[i].max : currentMonthBalance;
-        console.log('temp result', tempAmount, calculatorData.tier[i].interest * tempAmount * countDaysInMonth(month, year) / countDaysInYear(year));
+        // console.log('temp result', tempAmount, calculatorData.tier[i].interest * tempAmount * countDaysInMonth(month, year) / countDaysInYear(year));
         result.total += calculatorData.tier[i].interest * tempAmount * countDaysInMonth(month, year) / countDaysInYear(year);
         // // console.log(tempAmount, result.total);
         currentMonthBalance -= tempAmount;
@@ -242,7 +242,7 @@
 
     result.maxRate *= 100;
 
-    console.log(result);
+    // console.log(result);
 
     return result;
   }

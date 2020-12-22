@@ -352,8 +352,24 @@
         font-family: 'Roboto-Regular';
         font-weight: normal;
         transition: all .3s;
-        
-        &.active, &:hover {
+        background-color: $lightest-grey;
+        color: $black;
+
+        &:active { 
+          background-color: $lightest-grey;
+          border-color: $lightest-grey;
+        }
+        &.active {
+          font-family: 'Roboto-Bold';
+          background-color: $dark-blue;
+          color: $white;
+
+          &:hover {
+            color: $white;
+          }
+        }
+        &:hover {
+          color: $bright-blue;
           font-family: 'Roboto-Bold';
         }
         span {
@@ -413,7 +429,155 @@
     }
 
     .uob-stash-calculator {
-      padding: 80px 30px 30px 30px;
+      padding: 30px;
+
+      .input-mabs {
+        font-family: 'Roboto-Bold';
+        color: $darkest-grey;
+        text-align: right;
+      }
+      .calc-bg {
+        padding: 0;
+      }
+      .calculator {
+        margin-top: 50px;
+
+        .mCSB_horizontal.mCSB_inside>.mCSB_container {
+          margin-bottom: 0;
+        }
+        .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+          background-color: transparent;
+        }
+        .slider {
+          z-index: 2;
+        }
+        .slider-track,
+        .slider-tick {
+          box-shadow: none;
+        }
+        .slider-handle {
+          border: 2px solid $bright-blue;
+          background-color: $white;
+          background-image: none;
+        }
+        .slider-selection.tick-slider-selection,
+        .slider-tick.in-selection {
+          background-color: $bright-blue;
+          background-image: none;
+        }
+        .mCustomScrollbar {
+          padding-top: 20px;
+        }
+        .td-center .results {
+          height: 80px !important;
+        }
+        .td-center .results.total-interest .d-td {
+          border-bottom: 1px solid $light-grey;
+          border-top: 1px solid $light-grey;
+          font-size: 13px;
+          line-height: 20px;
+          font-family: 'Roboto-Bold';
+          color: $uob-blue;
+        }
+        .td-left .results {
+          text-align: right;
+          font-size: 13px;
+          line-height: 20px;
+          font-family: 'Roboto-Bold';
+          color: $uob-blue;
+
+          &.r__1 {
+            padding-top: 50px;
+            padding-bottom: 10px;
+          }
+          &.r__2 {
+            padding-top: 30px;
+            padding-bottom: 10px;
+          }
+        }
+        .td-right {
+          width: 10px;
+        }
+        .form-control {
+          font-size: 15px;
+          line-height: 24px;
+          padding: 5px;
+          margin: 0 10px;
+          font-family: 'Roboto-Medium';
+          color: $bright-blue;
+        }
+        .td-left-col {
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+        }
+        .td-left .input-mabs .d-td {
+          padding-top: 40px;
+        }
+        .scales .line {
+          border: 1px solid $light-grey;
+        }
+        .scales .td-left {
+          font-family: 'Roboto-Regular';
+          text-align: right;
+          padding-right: 10px;
+          padding-left: 10px;
+          color: $uob-blue;
+          font-size: 13px;
+          line-height: 20px;
+        }
+        .td-left .d-td {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .td-center .month {
+          font-family: 'Roboto-Regular';
+          color: $uob-blue;
+          font-weight: initial;
+        }
+        .td-center .month .info {
+          display: none;
+        }
+        .td-center .month .d-td {
+          position: relative;
+          padding-top: 20px;
+          padding-bottom: 0;
+        }
+        .td-center .month .note {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          color: $dark-blue;
+          font-family: 'Roboto-Regular';
+          font-size: 13px;
+          line-height: 20px;
+          transform: translateX(-50%);
+          width: 100%;
+        }
+      }
+      .calculator-intro {
+        margin-bottom: 30px;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+          padding: 0;
+        }
+        @include media-breakpoint-up(lg) {
+          padding: 0 165px;
+        }
+      }
+      
+      .carousel-table {
+        top: -90px;
+
+        .left ,
+        .right {
+          transform: rotate(90deg);
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
     }
   }
 
@@ -715,7 +879,6 @@ input[type=number] {
 		box-sizing: border-box;
 	}
 	.btn-adjust {
-		outline: none;
 		-webkit-appearance: none;
 		background-color: transparent;
 		border: none;
@@ -736,7 +899,10 @@ input[type=number] {
     line-height: 45px;
     transition: all .3s;
     &:hover {
-  		background-color: $focus-blue;
+  		background-color: $dark-blue;
+    }
+    &:focus {
+      outline: $focus-blue;
     }
 	}
 	.btn-adjust.left {
@@ -2118,10 +2284,14 @@ th {
 .uob-stash-calculator {
 	.footnote {
 		font-size: 14px;
-		color: #515151;
+		color: $white;
 		line-height: 1.2;
-		text-align: center;
-	}
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0 165px;
+    }
+  }
 }
 .calc-table {
 	position: relative;
@@ -2135,7 +2305,6 @@ th {
 	line-height: 1.2;
 	margin-bottom: 10px;
 	padding: 15px 15px;
-	overflow-x: hidden;
 	padding: 0;
 	.td-center {
 		.d-td {
@@ -2270,16 +2439,19 @@ th {
 	}
 }
 .result-total {
-	vertical-align: middle;
-	background: #06377b;
+  font-family: 'Roboto-Regular';
+  vertical-align: middle;
 	text-align: center;
-	font-size: 14px;
-	font-weight: 600;
-	color: #fff;
-	padding: 10px;
-	text-transform: uppercase;
+	font-size: 15px;
+  color: #fff;
+  margin-top: 20px;
+  
 	span {
-		font-size: 20px;
+    font-family: 'Roboto-Medium';
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 10px 0;
 	}
 }
 .scales {
