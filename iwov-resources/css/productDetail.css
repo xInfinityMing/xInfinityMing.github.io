@@ -14761,6 +14761,8 @@ a.pointer-none {
   margin: 0 10px;
   font-family: "Roboto-Medium";
   color: #1F6EDA;
+  border: 0;
+  background-color: #F5F5F5;
 }
 .uob-calculator .uob-calculator-cont .uob-stash-calculator .calculator .td-left-col {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
