@@ -94,7 +94,7 @@
       });
     });
 
-    $('.instruction-dot').on('click', function() {
+    $('.instruction-dot').hover(function() {
       if($('.instruction-box').is(':visible')) {
         $('.instruction-box').hide();
       } else {
