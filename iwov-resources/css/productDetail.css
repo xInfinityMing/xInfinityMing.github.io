@@ -14643,6 +14643,47 @@ a.pointer-none {
 .uob-calculator .uob-calculator-cont .uob-stash-calculator {
   padding: 30px;
 }
+.uob-calculator .uob-calculator-cont .uob-stash-calculator .instructions {
+  position: relative;
+  padding-bottom: 130px;
+}
+.uob-calculator .uob-calculator-cont .uob-stash-calculator .instruction-box {
+  position: absolute;
+  z-index: 3;
+  border: 0;
+  margin: 0;
+  left: 50px;
+  bottom: 160px;
+  width: 140px;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  display: none;
+  font-size: 13px;
+  line-height: 20px;
+  color: #212121;
+  font-family: "Roboto-Regular";
+}
+.uob-calculator .uob-calculator-cont .uob-stash-calculator .instruction-box:after {
+  content: "";
+  position: absolute;
+  bottom: -7.5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  background-color: #FFFFFF;
+  width: 15px;
+  height: 15px;
+}
+.uob-calculator .uob-calculator-cont .uob-stash-calculator .instruction-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #133359;
+  margin-left: auto;
+  cursor: pointer;
+}
 .uob-calculator .uob-calculator-cont .uob-stash-calculator .input-mabs {
   font-family: "Roboto-Bold";
   color: #6E6E6E;
@@ -14687,6 +14728,9 @@ a.pointer-none {
 .uob-calculator .uob-calculator-cont .uob-stash-calculator .calculator .td-center .results.total-interest .d-td {
   border-bottom: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+.uob-calculator .uob-calculator-cont .uob-stash-calculator .calculator .td-center .results.interest-amount .d-td,
+.uob-calculator .uob-calculator-cont .uob-stash-calculator .calculator .td-center .results.total-interest .d-td {
   font-size: 13px;
   line-height: 20px;
   font-family: "Roboto-Bold";
@@ -14770,11 +14814,7 @@ a.pointer-none {
 .uob-calculator .uob-calculator-cont .uob-stash-calculator .calculator-intro {
   margin-bottom: 30px;
   text-align: center;
-}
-@media (min-width: 768px) {
-  .uob-calculator .uob-calculator-cont .uob-stash-calculator .calculator-intro {
-    padding: 0;
-  }
+  padding: 0;
 }
 @media (min-width: 992px) {
   .uob-calculator .uob-calculator-cont .uob-stash-calculator .calculator-intro {
@@ -14782,7 +14822,7 @@ a.pointer-none {
   }
 }
 .uob-calculator .uob-calculator-cont .uob-stash-calculator .carousel-table {
-  top: -90px;
+  top: -50px;
 }
 .uob-calculator .uob-calculator-cont .uob-stash-calculator .carousel-table .left,
 .uob-calculator .uob-calculator-cont .uob-stash-calculator .carousel-table .right {
@@ -16521,7 +16561,6 @@ th {
   display: inline-block;
   background: #fff;
   margin-bottom: 20px;
-  font-style: italic;
 }
 .calculator .td-left .results {
   height: 60px;
@@ -16681,15 +16720,6 @@ th {
     padding-right: 0;
   }
 
-  .calculator .td-left {
-    display: none;
-  }
-  .calculator .td-left-xs {
-    width: 40px;
-    display: table-cell;
-    vertical-align: top;
-    width: 50px;
-  }
   .calculator .td-center .results .d-td {
     padding-top: 35px;
     padding-bottom: 10px;

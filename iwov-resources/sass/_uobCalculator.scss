@@ -431,6 +431,45 @@
     .uob-stash-calculator {
       padding: 30px;
 
+      .instructions {
+        position: relative;
+        padding-bottom: 130px;
+      }
+      .instruction-box {
+        position: absolute;
+        z-index: 3;
+        border: 0;
+        margin: 0;
+        left: 50px;
+        bottom: 160px;
+        width: 140px;
+        padding: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+        display: none;
+        font-size: 13px;
+        line-height: 20px;
+        color: $black;
+        font-family: 'Roboto-Regular';
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -7.5px;
+          left: 50%;
+          transform: translateX(-50%) rotate(45deg);
+          background-color: #FFFFFF;
+          width: 15px;
+          height: 15px;
+        }
+      }
+      .instruction-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $dark-blue;
+        margin-left: auto;
+        cursor: pointer;
+      }
       .input-mabs {
         font-family: 'Roboto-Bold';
         color: $darkest-grey;
@@ -474,6 +513,9 @@
         .td-center .results.total-interest .d-td {
           border-bottom: 1px solid $light-grey;
           border-top: 1px solid $light-grey;
+        }
+        .td-center .results.interest-amount .d-td,
+        .td-center .results.total-interest .d-td {
           font-size: 13px;
           line-height: 20px;
           font-family: 'Roboto-Bold';
@@ -556,8 +598,7 @@
       .calculator-intro {
         margin-bottom: 30px;
         text-align: center;
-
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(xs) {
           padding: 0;
         }
         @include media-breakpoint-up(lg) {
@@ -566,7 +607,7 @@
       }
       
       .carousel-table {
-        top: -90px;
+        top: -50px;
 
         .left ,
         .right {
@@ -2383,7 +2424,6 @@ th {
 			display: inline-block;
 			background: #fff;
 			margin-bottom: 20px;
-			font-style: italic;
 		}
 		.results {
 			height: 60px;
@@ -2546,15 +2586,6 @@ th {
 		padding-right: 0;
 	}
 	.calculator {
-		.td-left {
-			display: none;
-		}
-		.td-left-xs {
-			width: 40px;
-			display: table-cell;
-			vertical-align: top;
-			width: 50px;
-		}
 		.td-center {
 			.results {
 				.d-td {

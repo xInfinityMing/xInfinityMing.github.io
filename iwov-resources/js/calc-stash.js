@@ -94,10 +94,14 @@
       });
     });
 
-
+    $('.instruction-dot').on('click', function() {
+      if($('.instruction-box').is(':visible')) {
+        $('.instruction-box').hide();
+      } else {
+        $('.instruction-box').show();
+      }
+    });
   });
-
-
 
   // Window Loaded
   $(window).on('load', function () {
