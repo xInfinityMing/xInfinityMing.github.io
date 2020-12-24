@@ -1,0 +1,34 @@
+@import 'common.scss';
+@import 'header.scss';
+@import 'footer.scss';
+@import 'breadscrum.scss';
+@import 'onecard.scss';
+@import 'heroImageText.scss';
+@import 'categoryPageCard.scss';
+@import 'imageContentBlock.scss';
+@import 'tileCardSlide.scss';
+@import 'tileCardGroup.scss';
+@import 'uobAccordion.scss';
+@import 'cardLink.scss';
+@import 'uobItemScrollspy.scss';
+@import 'heretohelp.scss';
+
+.new-announcements {
+  p {
+    span {
+      color: red;
+      font-size: 13px;
+      vertical-align: top;
+    }
+  }
+
+  &.accordion {
+    h2 + .card {
+      padding-top: 50px;
+    }
+    .card {
+      padding-top: 30px;
+    }
+  }
+}
+
