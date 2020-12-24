@@ -26,6 +26,82 @@
 </head>
 
 <body id="compare-account-page-body">
+    <!-- JSON data -->
+    <script type="text/javascript">
+      window.data_compare_accounts = {
+        "listingHeader": ["Eligible Age",
+                          "Minimum Deposit",
+                          "Fall-below Fee",
+                          "Cheque Book Fee",
+                          "Early Account Closure Fee",
+                          "Local Cash Withdrawals",
+                          "Overseas Cash Withdrawals",
+                          "UOB Debit Card",
+                          "Rewards",
+                          "Joint Account Available",
+                          "Yes",
+                          "Apply Now"],
+        "listing": [
+          {
+            "name": "One Account",
+            "id": "one_account",
+            "img": "../iwov-resources/assets/Images/ProductCategoryPage/Product_1.jpg",
+            "listing": [
+              "18 years old & above",
+              "S$1,000",
+              "S$5 if the average daily balance falls below S$1,000",
+              "2 free cheque books, S$10 for every subsequent cheque book",
+              "S$30 (if account is closed within 6 months from account opening)",
+              "Free at UOB and OCBC ATMs in Singapore",
+              "Fees waived at UOB ATMs in Indonesia, Malaysia and Thailand. S$5 service charge per cash withdrawal on all other ATMs",
+              "A UOB One Debit Mastercard will be sent to you",
+              "-",
+              "Yes",
+              "You can earn higher interest of up to 3.88% p.a. on your savings, when you spend on the Mighty FX Debit Cardholder icons-tooltip",
+              "<div><button class='btn-default-secondary mb-3'>Find out more</button></div><div><button class='btn-default-primary border-0'>Apply now</button></div>"
+            ],
+          }, {
+            "name": "Krisflyer UOB Account",
+            "id": "krisflyer_account",
+            "img": "../iwov-resources/assets/Images/ProductCategoryPage/Product_2.jpg",
+            "listing": [
+              "18 years old & above",
+              "S$1,000",
+              "S$2 if the average daily balance falls below S$1,000",
+              "2 free cheque books, S$10 for every subsequent cheque book",
+              "S$30 (if account is closed within 6 months from account opening)",
+              "Free at UOB and OCBC ATMs in Singapore",
+              "Fees waived at UOB ATMs in Indonesia, Malaysia and Thailand. S$5 service charge per cash withdrawal on all other ATMs",
+              "A KrisFlyer UOB Debit Card will be sent to you. First year annual fee waived. S$53.50 yearly (inclusive of GST) annual fee",
+              "Earn additional bonus KrisFlyer miles per S$1 spend on eligible UOB Cards. Total bonus miles are capped at 5% of your monthly average balance.",
+              "Yes",
+              "Enjoy competitive exchange rates",
+              "<div><button class='btn-default-secondary mb-3'>Find out more</button></div><div><button class='btn-default-primary border-0'>Apply now</button></div>"
+            ]
+          }, {
+            "name": "Stash Account",
+            "id": "stash_account",
+            "img": "../iwov-resources/assets/Images/ProductCategoryPage/Product_3.jpg",
+            "listing": [
+              "15 years old & above",
+              "S$1,000 (for Singaporeans / Permanent Residents / Foreigners)",
+              "S$2 if the average daily balance falls below S$1,000",
+              "-",
+              "S$30 (if account is closed within 6 months from account opening)",
+              "Free at UOB and OCBC ATMs in Singapore",
+              "Fees waived at UOB ATMs in Indonesia, Malaysia and Thailand. S$5 service charge per cash withdrawal on all other ATMs",
+              "A UOB One Debit Mastercard will be sent to you",
+              "-",
+              "Yes",
+              "-",
+              "<div><button class='btn-default-secondary mb-3'>Find out more</button></div><div><button class='btn-default-primary border-0'>Apply now</button></div>"
+            ]
+          }
+        ]
+      };
+    </script>
+    <!-- JSON data -->
+
     <!-- Header Start -->
     <div class="page-header" id="compare-page-header">
         <!-- Navbar Start -->
@@ -1537,229 +1613,7 @@
             <div class="compare-tables">
                 <div>
                     <div class="col-12 pl-0 pr-0">
-                        <table class="table shadow ">
-                            <thead>
-                                <tr class="table-header-img">
-                                    <th class="col-6 col-md-3">
-                                        <img class="img-fluid" src="../iwov-resources/assets/Images/ProductCategoryPage/Product_1.jpg" alt="">
-                                    </th>
-                                    <th class="col-6 col-md-3">
-                                        <img class="img-fluid" src="../iwov-resources/assets/Images/ProductCategoryPage/Product_2.jpg" alt="">
-                                    </th>
-                                    <th class="col-6 col-md-3">
-                                        <img class="img-fluid" src="../iwov-resources/assets/Images/ProductCategoryPage/Product_3.jpg" alt="">
-                                    </th>
-                                    <th class="col-6 col-md-3">
-                                        
-                                    </th>
-                                </tr>
-                                <tr class="table-header-title">
-                                    <th>
-                                        <div class="compared-id d-none">card-1</div>
-                                        <div class="dropdown dropdown-header-one">
-                                            <button class="btn dropdown-toggle uob-h6" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                One Account
-                                            </button>
-                                            <div class="dropdown-menu">
-                                              <button class="dropdown-item" type="button">Action</button>
-                                              <button class="dropdown-item" type="button">Another action</button>
-                                              <button class="dropdown-item" type="button">Something else here</button>
-                                            </div>
-                                        </div>
-                                    </th>
-                                    <th>
-                                        <div class="compared-id d-none">card-2</div>
-                                        <div class="dropdown dropdown-header-two">
-                                            <button class="btn dropdown-toggle uob-h6" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Krisflyer UOB Account
-                                            </button>
-                                            <div class="dropdown-menu">
-                                              <button class="dropdown-item" type="button">Action</button>
-                                              <button class="dropdown-item" type="button">Another action</button>
-                                              <button class="dropdown-item" type="button">Something else here</button>
-                                            </div>
-                                        </div>
-                                    </th>
-                                    <th>
-                                        <div class="compared-id d-none">card-3</div>
-                                        <div class="dropdown dropdown-header-three">
-                                            <button class="btn dropdown-toggle uob-h6" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Stash Account
-                                            </button>
-                                            <div class="dropdown-menu">
-                                              <button class="dropdown-item" type="button">Action</button>
-                                              <button class="dropdown-item" type="button">Another action</button>
-                                              <button class="dropdown-item" type="button">Something else here</button>
-                                            </div>
-                                        </div>
-                                    </th>
-                                    <th class="empty-col">
-                                        <div class="compared-id d-none"></div>
-                                        <div class="dropdown dropdown-header-four">
-                                            <button class="btn dropdown-toggle uob-h6" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Select
-                                            </button>
-                                            <div class="dropdown-menu">
-                                              <button class="dropdown-item" type="button">Action</button>
-                                              <button class="dropdown-item" type="button">Another action</button>
-                                              <button class="dropdown-item" type="button">Something else here</button>
-                                            </div>
-                                        </div>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td colspan="4" class="table-sub-title text-center">Eligible Age</td>
-                                </tr>
-                                <tr class="table-content-row">
-                                    <td>18 years old & above</td>
-                                    <td>18 years old & above</td>
-                                    <td>15 years old & above</td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="4" class="table-sub-title text-center">Minimum Deposit</td>
-                                </tr>
-                                <tr class="table-content-row">
-                                    <td>S$1,000</td>
-                                    <td>S$1,000</td>
-                                    <td>S$1,000 (for Singaporeans / Permanent Residents / Foreigners)</td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="4" class="table-sub-title text-center">Fall-below Fee</td>
-                                </tr>
-                                <tr class="table-content-row">
-                                    <td>S$5 if the average daily balance falls below S$1,000</td>
-                                    <td>S$2 if the average daily balance falls below S$1,000</td>
-                                    <td>S$2 if the average daily balance falls below S$1,000</td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="4" class="table-sub-title text-center">Cheque Book Fee</td>
-                                </tr>
-                                <tr class="table-content-row">
-                                    <td>2 free cheque books, S$10 for every subsequent cheque book</td>
-                                    <td>2 free cheque books, S$10 for every subsequent cheque book</td>
-                                    <td>-</td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="4" class="table-sub-title text-center">Early Account Closure Fee</td>
-                                </tr>
-                                <tr class="table-content-row">
-                                    <td>S$30 (if account is closed within 6 months from account opening)</td>
-                                    <td>S$30 (if account is closed within 6 months from account opening)</td>
-                                    <td>S$30 (if account is closed within 6 months from account opening)</td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="4" class="table-sub-title text-center">Local Cash Withdrawals</td>
-                                </tr>
-                                <tr class="table-content-row">
-                                    <td>Free at UOB and OCBC ATMs in Singapore</td>
-                                    <td>Free at UOB and OCBC ATMs in Singapore</td>
-                                    <td>Free at UOB and OCBC ATMs in Singapore</td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="4" class="table-sub-title text-center">Overseas Cash Withdrawals</td>
-                                </tr>
-                                <tr class="table-content-row">
-                                    <td>Fees waived at UOB ATMs in Indonesia, Malaysia and Thailand. S$5 service charge per cash withdrawal on all other ATMs</td>
-                                    <td>Fees waived at UOB ATMs in Indonesia, Malaysia and Thailand. S$5 service charge per cash withdrawal on all other ATMs</td>
-                                    <td>Fees waived at UOB ATMs in Indonesia, Malaysia and Thailand. S$5 service charge per cash withdrawal on all other ATMs</td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="4" class="table-sub-title text-center">UOB Debit Card</td>
-                                </tr>
-                                <tr class="table-content-row">
-                                    <td>A UOB One Debit Mastercard will be sent to you</td>
-                                    <td>A KrisFlyer UOB Debit Card will be sent to you. First year annual fee waived. S$53.50 yearly (inclusive of GST) annual fee</td>
-                                    <td>A UOB One Debit Mastercard will be sent to you</td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="4" class="table-sub-title text-center">Rewards</td>
-                                </tr>
-                                <tr class="table-content-row">
-                                    <td>-</td>
-                                    <td>Earn additional bonus KrisFlyer miles per S$1 spend on eligible UOB Cards. Total bonus miles are capped at 5% of your monthly average balance.</td>
-                                    <td>-</td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="4" class="table-sub-title text-center">Joint Account Available</td>
-                                </tr>
-                                <tr class="table-content-row">
-                                    <td>Yes</td>
-                                    <td>Yes</td>
-                                    <td>Yes</td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="4" class="table-sub-title text-center">Yes</td>
-                                </tr>
-                                <tr class="table-content-row">
-                                    <td>
-                                        You can earn higher interest of up to 3.88% p.a. on your savings, when you spend on the Mighty FX Debit Cardholder
-                                        <a href="#" data-toggle="tooltip" title="tools tips content" data-original-title="">
-                                            <img src="../iwov-resources/assets/Icons/icons-tooltip.svg" alt="icons-tooltip" class="ca-icons-toolstip">
-                                        </a>
-                                        
-                                    </td>
-                                    <td>Enjoy competitive exchange rates</td>
-                                    <td>-</td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="4" class="table-sub-title text-center">Apply Now</td>
-                                </tr>
-                                <tr class="table-content-row">
-                                    <td class="text-center">
-                                        <div>
-                                            <button class="btn-default-secondary mb-3">Find out more</button>
-                                        </div>
-                                        <div>
-                                            <button class="btn-default-primary border-0">Apply now</button>
-                                        </div>
-                                        
-                                    </td>
-                                    <td class="text-center">
-                                        <div>
-                                            <button class="btn-default-secondary mb-3">Find out more</button>
-                                        </div>
-                                        <div>
-                                            <button class="btn-default-primary border-0">Apply now</button>
-                                        </div>
-                                        
-                                    </td>
-                                    <td class="text-center">
-                                        <div>
-                                            <button class="btn-default-secondary mb-3">Find out more</button>
-                                        </div>
-                                        <div>
-                                            <button class="btn-default-primary border-0">Apply now</button>
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                </tr>
-
-                            </tbody>
-                        </table>
+                        <div id="appendTables"></div>
                     </div> 
                 </div>
             </div>
