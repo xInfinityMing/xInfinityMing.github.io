@@ -7,7 +7,6 @@ $(document).ready(function(){
         var mastheadTop = $(".masthead ") && $(".masthead ").position() && $(".masthead ").position().top;
     
         if(offsetTop < prevScrollTop) {
-
             displayStickyMegaBar();
             // scroll up detail page scrollspy top auto
             $("#pd-scrollpy-nav") &&  $("#pd-scrollpy-nav").removeClass("top0");
@@ -16,7 +15,6 @@ $(document).ready(function(){
             if(offsetTop == 0) {
                 hideStickyMegaBar();
             }
-
         } else {
             if(isHomePage()) {
                 if(offsetTop >= mastheadTop) {
@@ -33,7 +31,7 @@ $(document).ready(function(){
         }
 
         prevScrollTop = offsetTop;
-        
+
         // scrollspy sticky
         if(documentTop > scrollPyNavTop) {
             displayScrollSpyStickyBar();
@@ -46,6 +44,19 @@ $(document).ready(function(){
             $("#pd-scrollpy-nav ul").children("li:first-child").children(".nav-link").addClass("default-active");
             tabUnderLine();
         }  
+
+        var headerHeight = $("#header").height();
+        if(offsetTop > headerHeight) {
+            $(".header-mega-menu .fixed-top").removeClass("offset-top");
+            $(".header .lg-navbar .login-button").removeClass("d-block").addClass("d-none");
+            $(".header-mega-menu .login-button-sticky").removeClass("d-none").addClass("d-block");
+            $(".sticky-navbar").removeClass("login-button-sticky-none").addClass("login-button-sticky-block");
+        } else {
+            $(".header-mega-menu .fixed-top").addClass("offset-top");
+            $(".header .lg-navbar .login-button").removeClass("d-none").addClass("d-block");
+            $(".header-mega-menu .login-button-sticky").removeClass("d-block").addClass("d-none");
+            $(".sticky-navbar").removeClass("login-button-sticky-block").addClass("login-button-sticky-none");
+        }
     }); 
     //click nav
     $(".uob-scrollpy .nav-item").on('click', function() {

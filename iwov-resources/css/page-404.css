@@ -42437,4 +42437,18 @@ strong {
   background-size: 100% 1px;
 }
 
+/* Page 404 CSS */
+@media (max-width: 992px) {
+  .page_404 .row .col-12:nth-child(1){
+    order: 2;
+  }
+  .page_404 .row .col-12:nth-child(1) .section-vertical-r {
+    margin-bottom: 0;
+  }
+  
+  .page_404 .row .col-12:nth-child(2){
+    margin-bottom: 30px;
+  }
+}
+
 /*# sourceMappingURL=page-404.css.map */
