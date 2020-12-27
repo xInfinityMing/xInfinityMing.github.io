@@ -4,10 +4,10 @@ $(document).ready(function(){
     const accordionName = urlParams.get('year')
 
     if(accordionName) {
-        $('#' + accordionName).collapse('show');
+        $('#year_' + accordionName).collapse('show');
         setTimeout(function() {
             $('html, body').animate({
-                scrollTop: $('#' + accordionName).offset().top - 150
+                scrollTop: $('#year_' + accordionName).offset().top - 150
             }, 500);
         },300);
     }
