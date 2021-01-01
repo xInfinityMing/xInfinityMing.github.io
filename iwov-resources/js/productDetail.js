@@ -36,6 +36,36 @@ function rebate_calc() {
     $('#cash-rebate').html('S$' + commaSeparateNumber(rebate));
     $('#interest').html(interest);
 }
+function initCarousel($element) {
+    // slide carousel 
+    // - 1 becasue i add a empty carousel-item at the last for the last item style
+    var carouselLength = $element.find('.tile-card-slide .carousel-item').length - 1;
+    // If there is more than one item
+    if (carouselLength) {
+        $element.find('.tile-card-slide .carousel-control-next').removeClass('d-none');
+    }
+
+    $element.find('.tile-card-slide .carousel').carousel({
+        interval: false,
+        wrap: false
+    }).on('slide.bs.carousel', function (e) {
+        console.log(e.to)
+        console.log(carouselLength)
+        // First one
+        if (e.to == 0) {
+            $element.find('.carousel-control-prev').addClass('d-none');
+            $element.find('.carousel-control-next').removeClass('d-none');
+        } // Last one
+        else if (e.to == carouselLength) {
+            $element.find('.carousel-control-prev').removeClass('d-none');
+            $element.find('.carousel-control-next').addClass('d-none');
+        } // The rest
+        else {
+            $element.find('.carousel-control-prev').removeClass('d-none');
+            $element.find('.carousel-control-next').removeClass('d-none');
+        }
+    });
+}
 $(document).ready(function(){
     var underline = $("#tab-underline");
     var activePill = $("#pills-tab .default-active");
@@ -105,7 +135,7 @@ $(document).ready(function(){
             }
 
 			if ($(window).width() >= 768) {
-				if (!$(this).find(".active").length) {
+				if (!$(this).find(".active").length && _pillActive) {
 					underline.css({
 						left: _pillActive && _pillActive.position && _pillActive.position().left + 10,
 						width: _pillActive && _pillActive.width(),
@@ -114,36 +144,6 @@ $(document).ready(function(){
 			}
 		}
 	);
-
-
-	function initCarousel($element) {
-        // slide carousel 
-        // - 2 becasue i add a empty carousel-item at the last for the last item style
-        var carouselLength = $element.find('.tile-card-slide .carousel-item').length - 2;
-        // If there is more than one item
-        if (carouselLength) {
-            $element.find('.tile-card-slide .carousel-control-next').removeClass('d-none');
-        }
-
-        $element.find('.tile-card-slide .carousel').carousel({
-            interval: false,
-            wrap: false
-        }).on('slide.bs.carousel', function (e) {
-            // First one
-            if (e.to == 0) {
-                $element.find('.carousel-control-prev').addClass('d-none');
-                $element.find('.carousel-control-next').removeClass('d-none');
-            } // Last one
-            else if (e.to == carouselLength) {
-                $element.find('.carousel-control-prev').removeClass('d-none');
-                $element.find('.carousel-control-next').addClass('d-none');
-            } // The rest
-            else {
-                $element.find('.carousel-control-prev').removeClass('d-none');
-                $element.find('.carousel-control-next').removeClass('d-none');
-            }
-        });
-   }
 
    $('#calculate-btn').on('click', function (e) {
         var el = $(this),
@@ -166,4 +166,8 @@ $(document).ready(function(){
 
         rebate_calc();
     });
-})
+});
+
+$(window).on('resize', function() {
+    initCarousel($(".bank-beyond-save"));
+});

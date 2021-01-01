@@ -42438,6 +42438,20 @@ strong {
 }
 
 /* Page 404 CSS */
+.notice-bar {
+  height: 80px;
+  position: relative;
+  display: flex;
+}
+.notice-bar .close-notice-bar img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  transform: translateY(-50%);
+}
+
 @media (max-width: 992px) {
   .page_404 .row .col-12:nth-child(1){
     order: 2;
@@ -42451,4 +42465,38 @@ strong {
   }
 }
 
+@media (min-width: 992px) {
+  .page-header .header-mega-menu .mega-menu-lg-container {
+    position: relative;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    z-index: 10;
+  }
+  .page-header .header-mega-menu .mega-menu-lg-container.sticky-show {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+  }
+  .page-header .header-mega-menu .mega-menu-lg-container.hide-with-translate {
+    -webkit-transform: translate(0, -100px);
+        -ms-transform: translate(0, -100px);
+            transform: translate(0, -100px);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    height: 0;
+  }
+  .page-header .header-mega-menu .mega-menu-lg-container .megamenu-li .mega-menu {
+    z-index: 1051;
+  }
+}
 /*# sourceMappingURL=page-404.css.map */

@@ -13266,7 +13266,7 @@ a.pointer-none {
   margin-right: 25px;
 }
 .tile-card-slide .carousel-item.active + .carousel-item {
-  margin-right: -50%;
+  margin-right: -80%;
   display: block;
 }
 .tile-card-slide .carousel-indicators {
