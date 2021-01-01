@@ -13559,7 +13559,7 @@ a.pointer-none {
 }
 .uob-table-carousel .table-toggle table {
   border-spacing: 0;
-  border-collapse: separate;
+  border-collapse: collapse;
   position: relative;
   left: 0;
   -webkit-transition: left 0.3s ease-in-out;
