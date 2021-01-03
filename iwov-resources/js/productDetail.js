@@ -49,8 +49,6 @@ function initCarousel($element) {
         interval: false,
         wrap: false
     }).on('slide.bs.carousel', function (e) {
-        console.log(e.to)
-        console.log(carouselLength)
         // First one
         if (e.to == 0) {
             $element.find('.carousel-control-prev').addClass('d-none');
