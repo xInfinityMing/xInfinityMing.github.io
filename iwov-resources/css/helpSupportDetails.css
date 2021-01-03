@@ -13122,7 +13122,7 @@ a.pointer-none {
 .category-page-card .category-items {
   min-width: 780px;
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .category-page-card .category-items .category-item {
   max-width: 33.2%;
