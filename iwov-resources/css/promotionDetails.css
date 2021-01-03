@@ -13602,6 +13602,7 @@ a.pointer-none {
   line-height: 1.5;
   text-align: center;
   border-top: 0;
+  height: 0;
   border-right: 1px solid #E6E6E6;
   border-bottom: 1px solid #E6E6E6;
   vertical-align: middle;

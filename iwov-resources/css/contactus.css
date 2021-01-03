@@ -167343,6 +167343,7 @@ a:hover {
   border-top: 0;
   border-right: 1px solid #E6E6E6;
   border-bottom: 1px solid #E6E6E6;
+  height: 0;
 }
 .uob-table-carousel .table-toggle table tr td {
   padding: 20px 10px;
